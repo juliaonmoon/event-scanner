@@ -157,8 +157,8 @@
     "momentum_5d": 14.6,
     "notes": "moderate avg move 6.4%; bearish bias 83% drops",
     "status": "ACTIVE",
-    "pnl_pct": null,
-    "pnl_note": null
+    "pnl_pct": 0.0,
+    "pnl_note": "stock near flat (+0.0%), IV expansion may offset (ESTIMATED)"
   },
   {
     "id": "BA_EARNINGS_2026-07-28",
@@ -180,8 +180,8 @@
     "momentum_5d": 5.5,
     "notes": "bullish bias 83% wins; momentum confirms bullish bias",
     "status": "ACTIVE",
-    "pnl_pct": null,
-    "pnl_note": null
+    "pnl_pct": 0.0,
+    "pnl_note": "stock +0.0%, est call ~+0.0% (ESTIMATED)"
   },
   {
     "id": "MRNA_EARNINGS_2026-07-31",
@@ -203,7 +203,7 @@
     "momentum_5d": 0.7,
     "notes": "moderate avg move 7.4%; bearish bias 83% drops",
     "status": "ACTIVE",
-    "pnl_pct": null,
-    "pnl_note": null
+    "pnl_pct": 0.0,
+    "pnl_note": "stock near flat (+0.0%), IV expansion may offset (ESTIMATED)"
   }
 ]
