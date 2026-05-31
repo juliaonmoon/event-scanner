@@ -1,0 +1,36 @@
+name: Daily Event Scan
+
+on:
+  schedule:
+    - cron: '0 14 * * *'   # 6:00 AM PST (UTC-8) / 7:00 AM PDT (UTC-7)
+  workflow_dispatch:        # allow manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scan and generate dashboard
+        run: python update.py
+
+      - name: Commit updated files
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add opportunities.json index.html
+          git diff --staged --quiet || git commit -m "Daily scan $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push

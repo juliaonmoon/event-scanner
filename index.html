@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Event Scanner</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:#0d1117;color:#e6edf3;font-family:'Segoe UI',system-ui,sans-serif;font-size:14px}
+    header{background:#161b22;border-bottom:1px solid #30363d;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+    header h1{font-size:18px;font-weight:600;color:#58a6ff}
+    .meta{font-size:12px;color:#8b949e}
+    .meta span{color:#3fb950}
+    .container{padding:20px 24px;max-width:1400px;margin:0 auto}
+    .section-title{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#8b949e;margin:24px 0 12px;padding-bottom:8px;border-bottom:1px solid #21262d}
+    .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+    .card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:16px;position:relative;overflow:hidden}
+    .card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%}
+    .card.swing::before{background:#58a6ff}
+    .card.day::before{background:#f0883e}
+    .card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
+    .ticker{font-size:20px;font-weight:700}
+    .score-badge{padding:2px 8px;border-radius:12px;font-size:12px;font-weight:600}
+    .score-high{background:#1a3a2a;color:#3fb950;border:1px solid #2ea043}
+    .score-mid{background:#2d2a1a;color:#d29922;border:1px solid #9e6a03}
+    .score-low{background:#21262d;color:#8b949e;border:1px solid #30363d}
+    .play-tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;letter-spacing:.05em;margin-bottom:10px}
+    .play-swing{background:#0d2041;color:#58a6ff}
+    .play-day{background:#2d1f0a;color:#f0883e}
+    .event-info{font-size:12px;color:#8b949e;margin-bottom:10px}
+    .event-info strong{color:#c9d1d9}
+    .countdown{font-size:12px;font-weight:600;color:#d29922}
+    .countdown.soon{color:#f85149}
+    .strategy-box{background:#0d1117;border:1px solid #21262d;border-radius:6px;padding:10px;margin:10px 0}
+    .strategy-box .lbl{font-size:11px;color:#8b949e;margin-bottom:3px}
+    .strategy-box .val{font-size:13px;color:#58a6ff;font-weight:600}
+    .strategy-box .inst{font-size:12px;color:#c9d1d9;margin-top:4px}
+    .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0}
+    .metric{text-align:center}
+    .metric .v{font-size:14px;font-weight:600}
+    .metric .l{font-size:10px;color:#8b949e;margin-top:2px}
+    .green{color:#3fb950} .yellow{color:#d29922} .red{color:#f85149}
+    .pnl-box{margin-top:10px;padding:8px;border-radius:6px;font-size:12px}
+    .pnl-pos{background:#1a3a2a;color:#3fb950;border:1px solid #2ea043}
+    .pnl-neg{background:#3a1a1a;color:#f85149;border:1px solid #da3633}
+    .pnl-neu{background:#21262d;color:#8b949e;border:1px solid #30363d}
+    .notes{font-size:11px;color:#8b949e;margin-top:8px}
+    .exit-info{font-size:11px;color:#8b949e;margin-top:8px;padding-top:8px;border-top:1px solid #21262d}
+    .exit-info strong{color:#f0883e}
+    table{width:100%;border-collapse:collapse;font-size:13px}
+    th{text-align:left;padding:8px 12px;color:#8b949e;font-weight:500;font-size:12px;border-bottom:1px solid #21262d}
+    td{padding:10px 12px;border-bottom:1px solid #161b22;vertical-align:middle}
+    tr:hover td{background:#161b22}
+    .st-badge{padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600}
+    .st-exited{background:#21262d;color:#8b949e}
+    .st-archived{background:#1a1a1a;color:#484f58}
+    .pnl-p{color:#3fb950;font-weight:600} .pnl-n{color:#f85149;font-weight:600} .pnl-e{color:#d29922}
+    .empty{text-align:center;padding:40px;color:#484f58}
+  </style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Event Scanner</h1>
+    <div class="meta">Updated: <span>2026-05-30 23:55 PST</span> &nbsp;|&nbsp; Refreshes daily at 6:00 AM PST</div>
+  </div>
+  <div class="meta" id="counts"></div>
+</header>
+<div class="container">
+  <div class="section-title">Active Opportunities</div>
+  <div class="cards" id="active-cards"><div class="empty">Loading...</div></div>
+  <div class="section-title" style="margin-top:32px">Past Events &amp; P&amp;L</div>
+  <table><thead><tr>
+    <th>Ticker</th><th>Event</th><th>Event Date</th><th>Strategy</th>
+    <th>Entry Price</th><th>Score</th><th>P&amp;L</th><th>Note</th><th>Status</th>
+  </tr></thead><tbody id="past-rows"></tbody></table>
+</div>
+<script>
+const DATA = [{"id": "RKLB_EARNINGS_2026-08-06", "ticker": "RKLB", "event_type": "EARNINGS", "event_date": "2026-08-06", "exit_date": "2026-08-05", "added_date": "2026-05-30", "score": 50, "play": "SWING", "strategy": "STRADDLE", "instruments": "Sep 19 $143 Call + Sep 19 $143 Put", "entry_stock_price": 143.48, "current_stock_price": 143.48, "exp_move_pct": 5.8, "avg_move_pct": 10.5, "win_rate": 40, "avg_direction": 3.6, "momentum_5d": 5.7, "notes": "big avg move 10.5%; IV underpricing history; momentum confirms bullish bias", "status": "ACTIVE", "pnl_pct": 0.0, "pnl_note": "stock near flat (+0.0%), IV expansion may offset (ESTIMATED)"}, {"id": "GOOGL_EARNINGS_2026-07-23", "ticker": "GOOGL", "event_type": "EARNINGS", "event_date": "2026-07-23", "exit_date": "2026-07-22", "added_date": "2026-05-30", "score": 43, "play": "SWING", "strategy": "LONG CALL", "instruments": "Aug 15 $380 Call (or shares)", "entry_stock_price": 380.34, "current_stock_price": 380.34, "exp_move_pct": 2.4, "avg_move_pct": 3.1, "win_rate": 80, "avg_direction": 2.9, "momentum_5d": -0.7, "notes": "bullish bias 80% wins; IV underpricing history", "status": "ACTIVE", "pnl_pct": 0.0, "pnl_note": "stock +0.0%, est call ~+0.0% (ESTIMATED)"}, {"id": "META_EARNINGS_2026-07-29", "ticker": "META", "event_type": "EARNINGS", "event_date": "2026-07-29", "exit_date": "2026-07-28", "added_date": "2026-05-30", "score": 30, "play": "SWING", "strategy": "STRADDLE", "instruments": "Aug 21 $632 Call + Aug 21 $632 Put", "entry_stock_price": 632.51, "current_stock_price": 632.51, "exp_move_pct": 2.8, "avg_move_pct": 9.2, "win_rate": 60, "avg_direction": 1.2, "momentum_5d": 3.6, "notes": "moderate avg move 9.2%; IV underpricing history", "status": "ACTIVE", "pnl_pct": 0.0, "pnl_note": "stock near flat (+0.0%), IV expansion may offset (ESTIMATED)"}, {"id": "SPCE_EARNINGS_2026-08-05", "ticker": "SPCE", "event_type": "EARNINGS", "event_date": "2026-08-05", "exit_date": "2026-08-04", "added_date": "2026-05-30", "score": 25, "play": "SWING", "strategy": "SHARES (momentum only)", "instruments": "Small lot shares, entry on pullback to $5.00-5.50", "entry_stock_price": 6.18, "current_stock_price": 6.18, "exp_move_pct": 29.4, "avg_move_pct": 15.6, "win_rate": 60, "avg_direction": 10.8, "momentum_5d": 90.7, "notes": "big avg move 15.6%; IV already pricing in move; momentum confirms bullish bias", "status": "ACTIVE", "pnl_pct": 0.0, "pnl_note": "stock +0.0% from entry"}, {"id": "NVDA_COMPUTEX_2026-06-01", "ticker": "NVDA", "event_type": "COMPUTEX", "event_date": "2026-06-01", "exit_date": "2026-06-01", "added_date": "2026-05-30", "score": 15, "play": "DAY", "strategy": "DAY TRADE", "instruments": "Shares or 1-week calls at open, sell same day", "entry_stock_price": 138.0, "current_stock_price": 211.14, "exp_move_pct": 3.8, "avg_move_pct": 2.9, "win_rate": 20, "avg_direction": -1.6, "momentum_5d": -1.9, "notes": "Computex product announcement - day trade only, do not hold overnight", "status": "ACTIVE", "pnl_pct": null, "pnl_note": "day trade - P&L depends on intraday execution"}, {"id": "ACAD_EARNINGS_2026-08-05", "ticker": "ACAD", "event_type": "EARNINGS", "event_date": "2026-08-05", "exit_date": "2026-08-04", "added_date": "2026-05-30", "score": 25, "play": "SWING", "strategy": "STRADDLE", "instruments": "ATM Call + Put expiring after event", "entry_stock_price": 21.66, "current_stock_price": 21.66, "exp_move_pct": 7.4, "avg_move_pct": 5.2, "win_rate": 60, "avg_direction": 3.5, "momentum_5d": 2.7, "notes": "moderate avg move 5.2%; momentum confirms bullish bias", "status": "ACTIVE", "pnl_pct": null, "pnl_note": null}];
+
+function sc(s){return s>=40?'score-high':s>=25?'score-mid':'score-low'}
+function pnlCls(p){return p===null||p===undefined?'pnl-neu':p>=0?'pnl-pos':'pnl-neg'}
+function mColor(v,isWR){
+  if(isWR){return v>=65?'green':v>=50?'yellow':'red'}
+  if(v===null||v===undefined)return'';return v>=0?'green':'red'
+}
+
+function card(o){
+  const cls   = o.play==='DAY'?'day':'swing';
+  const ptag  = o.play==='DAY'?'play-day':'play-swing';
+  const days  = Math.ceil((new Date(o.event_date)-new Date())/86400000);
+  const edays = Math.ceil((new Date(o.exit_date)-new Date())/86400000);
+  const chg   = o.current_stock_price&&o.entry_stock_price
+    ? ((o.current_stock_price-o.entry_stock_price)/o.entry_stock_price*100).toFixed(1) : null;
+  const pnlH  = o.pnl_pct!==null&&o.pnl_pct!==undefined
+    ? `<div class="pnl-box ${pnlCls(o.pnl_pct)}"><strong>Est. P&L: ${o.pnl_pct>=0?'+':''}${o.pnl_pct}%</strong>${o.pnl_note?`<br><span style="font-size:11px">${o.pnl_note}</span>`:''}
+</div>` : '';
+  return `<div class="card ${cls}">
+    <div class="card-header">
+      <div><div class="ticker">${o.ticker}</div><span class="play-tag ${ptag}">${o.play}</span></div>
+      <span class="score-badge ${sc(o.score)}">Score ${o.score}</span>
+    </div>
+    <div class="event-info"><strong>${o.event_type}</strong> &mdash; ${o.event_date}
+      &nbsp;<span class="countdown${days<=7?' soon':''}">${days}d away</span></div>
+    <div class="strategy-box">
+      <div class="lbl">Strategy</div><div class="val">${o.strategy}</div>
+      <div class="inst">${o.instruments}</div>
+    </div>
+    <div class="metrics">
+      <div class="metric"><div class="v ${mColor(o.win_rate,true)}">${o.win_rate??'--'}%</div><div class="l">Win Rate</div></div>
+      <div class="metric"><div class="v">${o.avg_move_pct??'--'}%</div><div class="l">Hist Move</div></div>
+      <div class="metric"><div class="v ${mColor(o.avg_direction,false)}">${o.avg_direction!==null?(o.avg_direction>=0?'+':'')+o.avg_direction+'%':'--'}</div><div class="l">Avg Dir</div></div>
+    </div>
+    <div class="metrics">
+      <div class="metric"><div class="v">${o.exp_move_pct??'--'}%</div><div class="l">IV Move</div></div>
+      <div class="metric"><div class="v">$${o.current_stock_price??'--'}</div><div class="l">Price</div></div>
+      <div class="metric"><div class="v ${mColor(chg,false)}">${chg!==null?(chg>=0?'+':'')+chg+'%':'--'}</div><div class="l">vs Entry</div></div>
+    </div>
+    ${pnlH}
+    ${o.notes?`<div class="notes">${o.notes}</div>`:''}
+    <div class="exit-info">Exit by: <strong>${o.exit_date}</strong> (${edays}d) &mdash; Added ${o.added_date}</div>
+  </div>`;
+}
+
+function pastRow(o){
+  const p = o.pnl_pct;
+  const pt = p!==null&&p!==undefined?`${p>=0?'+':''}${p}%`:'--';
+  const pc = p!==null&&p!==undefined?(p>=0?'pnl-p':'pnl-n')+(o.pnl_note&&o.pnl_note.includes('ESTIMATED')?' pnl-e':''):'';
+  return `<tr>
+    <td><strong>${o.ticker}</strong></td><td>${o.event_type}</td><td>${o.event_date}</td>
+    <td>${o.strategy}</td><td>$${o.entry_stock_price??'--'}</td><td>${o.score}</td>
+    <td class="${pc}">${pt}${o.pnl_note&&o.pnl_note.includes('ESTIMATED')?' *':''}</td>
+    <td style="color:#8b949e;font-size:11px;max-width:200px">${o.pnl_note??''}</td>
+    <td><span class="st-badge st-${o.status.toLowerCase()}">${o.status}</span></td>
+  </tr>`;
+}
+
+const active = DATA.filter(o=>o.status==='ACTIVE').sort((a,b)=>b.score-a.score);
+const past   = DATA.filter(o=>o.status!=='ACTIVE').sort((a,b)=>new Date(b.event_date)-new Date(a.event_date));
+
+document.getElementById('active-cards').innerHTML =
+  active.length ? active.map(card).join('') : '<div class="empty">No active opportunities.</div>';
+document.getElementById('past-rows').innerHTML =
+  past.length ? past.map(pastRow).join('') :
+  '<tr><td colspan="9" style="text-align:center;color:#484f58;padding:20px">No past events yet.</td></tr>';
+document.getElementById('counts').textContent =
+  `${active.length} active / ${past.length} past`;
+</script>
+</body>
+</html>
