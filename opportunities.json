@@ -110,7 +110,7 @@
     "avg_direction": -1.6,
     "momentum_5d": -1.9,
     "notes": "Computex product announcement - day trade only, do not hold overnight",
-    "status": "ACTIVE",
+    "status": "EXITED",
     "pnl_pct": null,
     "pnl_note": "day trade - P&L depends on intraday execution"
   },
