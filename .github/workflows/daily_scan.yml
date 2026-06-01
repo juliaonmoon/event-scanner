@@ -34,3 +34,4 @@ jobs:
           git add opportunities.json index.html
           git diff --staged --quiet || git commit -m "Daily scan $(date -u '+%Y-%m-%d %H:%M UTC')"
           git push
+          git push origin HEAD:master
