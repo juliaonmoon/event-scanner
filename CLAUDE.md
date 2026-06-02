@@ -45,7 +45,7 @@ This was fixed on 2026-06-01 — previously master was not being updated.
 IB account for this project (for future live/paper trading integration).
 **Credentials are in PRIVATE.docx** (local only, never committed).
 
-- Login: `julesonmoon2010`
+- Login: `elianpaper30`
 - URL: clientportal.ibkr.com
 
 ---
