@@ -58,6 +58,10 @@ def calc_pnl(opp):
 
 
 def update_prices(opps):
+    if TODAY.weekday() >= 5:  # 5=Saturday, 6=Sunday
+        print("  Skipping price refresh - market closed on weekends.")
+        return opps
+    updated = 0
     for opp in opps:
         if opp["status"] != "ACTIVE":
             continue
@@ -68,7 +72,12 @@ def update_prices(opps):
             opp["pnl_pct"]  = pnl
             opp["pnl_note"] = note
             print(f"  {opp['ticker']}: ${price} | P&L: {pnl}%")
+            updated += 1
+        else:
+            print(f"  {opp['ticker']}: price fetch failed, keeping last known")
         time.sleep(0.3)
+    active_count = sum(1 for o in opps if o["status"] == "ACTIVE")
+    print(f"  {updated}/{active_count} prices updated.")
     return opps
 
 
