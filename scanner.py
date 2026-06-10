@@ -131,6 +131,39 @@ def get_current_price(ticker):
         return None
 
 
+def pick_expiry(ticker, on_or_after):
+    """First available option expiry on/after the given date."""
+    try:
+        t = yf.Ticker(ticker)
+        for exp in t.options:
+            d = datetime.strptime(exp, "%Y-%m-%d").date()
+            if d >= on_or_after:
+                return exp
+        return t.options[-1] if t.options else None
+    except Exception:
+        return None
+
+
+def get_option_quote(ticker, expiry, strike, kind):
+    """Mid (bid/ask) premium for the contract nearest `strike`. Returns (premium, actual_strike)."""
+    try:
+        t = yf.Ticker(ticker)
+        chain = t.option_chain(expiry)
+        df = (chain.calls if kind == "CALL" else chain.puts).set_index("strike")
+        if df.empty:
+            return None, None
+        actual_strike = strike if strike in df.index else min(df.index, key=lambda x: abs(x - strike))
+        row = df.loc[actual_strike]
+        bid, ask, last = row.get("bid", 0) or 0, row.get("ask", 0) or 0, row.get("lastPrice", 0) or 0
+        if bid > 0 and ask > 0:
+            return round((bid + ask) / 2, 2), float(actual_strike)
+        if last > 0:
+            return round(float(last), 2), float(actual_strike)
+        return None, None
+    except Exception:
+        return None, None
+
+
 def score_and_suggest(row):
     score = 0
     notes = []
