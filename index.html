@@ -56,17 +56,24 @@
     .st-archived{background:#1a1a1a;color:#484f58}
     .pnl-p{color:#3fb950;font-weight:600} .pnl-n{color:#f85149;font-weight:600} .pnl-e{color:#d29922}
     .empty{text-align:center;padding:40px;color:#484f58}
+    .portfolio{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;background:#161b22;border:1px solid #30363d;border-radius:8px;padding:16px}
+    .portfolio .stat{text-align:center}
+    .portfolio .stat .v{font-size:22px;font-weight:700}
+    .portfolio .stat .l{font-size:11px;color:#8b949e;margin-top:4px;text-transform:uppercase;letter-spacing:.05em}
+    .portfolio-note{font-size:11px;color:#8b949e;margin-top:10px}
   </style>
 </head>
 <body>
 <header>
   <div>
     <h1>Event Scanner</h1>
-    <div class="meta">Updated: <span>2026-06-09 16:34 PST</span> &nbsp;|&nbsp; Refreshes daily at 6:00 AM PST</div>
+    <div class="meta">Updated: <span>2026-06-09 21:44 PST</span> &nbsp;|&nbsp; Refreshes daily at 6:00 AM PST</div>
   </div>
   <div class="meta" id="counts"></div>
 </header>
 <div class="container">
+  <div class="section-title">Portfolio Performance</div>
+  <div class="portfolio" id="portfolio-summary"></div>
   <div class="section-title">Active Opportunities</div>
   <div class="cards" id="active-cards"><div class="empty">Loading...</div></div>
   <div class="section-title" style="margin-top:32px">Past Events &amp; P&amp;L</div>
@@ -134,6 +141,36 @@ function pastRow(o){
     <td><span class="st-badge st-${o.status.toLowerCase()}">${o.status}</span></td>
   </tr>`;
 }
+
+const STAKE = 1000; // hypothetical $ invested per opportunity, for tracking purposes
+
+function renderPortfolio(){
+  const tracked = DATA.filter(o=>o.pnl_pct!==null&&o.pnl_pct!==undefined);
+  const closed  = tracked.filter(o=>o.status!=='ACTIVE');
+  const openT   = tracked.filter(o=>o.status==='ACTIVE');
+
+  const sumPnl = arr => arr.reduce((s,o)=>s+STAKE*o.pnl_pct/100,0);
+  const totalInvested = tracked.length*STAKE;
+  const totalPnlDollar = sumPnl(tracked);
+  const totalRoi = totalInvested ? (totalPnlDollar/totalInvested*100) : 0;
+  const closedRoi = closed.length ? (sumPnl(closed)/(closed.length*STAKE)*100) : 0;
+  const wins = closed.filter(o=>o.pnl_pct>0).length;
+  const winRate = closed.length ? (wins/closed.length*100) : null;
+
+  const fmtUsd = v => `${v>=0?'+':'-'}$${Math.abs(v).toFixed(2)}`;
+  const fmtPct = v => `${v>=0?'+':''}${v.toFixed(1)}%`;
+  const cls = v => v>=0?'green':'red';
+
+  document.getElementById('portfolio-summary').innerHTML = `
+    <div class="stat"><div class="v">${tracked.length}</div><div class="l">Trades Tracked</div></div>
+    <div class="stat"><div class="v">$${totalInvested.toLocaleString()}</div><div class="l">Hypothetical Invested ($${STAKE}/trade)</div></div>
+    <div class="stat"><div class="v ${cls(totalPnlDollar)}">${fmtUsd(totalPnlDollar)}</div><div class="l">Total P&amp;L</div></div>
+    <div class="stat"><div class="v ${cls(totalRoi)}">${fmtPct(totalRoi)}</div><div class="l">Overall ROI</div></div>
+    <div class="stat"><div class="v ${cls(closedRoi)}">${closed.length?fmtPct(closedRoi):'--'}</div><div class="l">Closed-Trade ROI (${closed.length})</div></div>
+    <div class="stat"><div class="v">${winRate!==null?winRate.toFixed(0)+'%':'--'}</div><div class="l">Win Rate (Closed)</div></div>
+  ` + `<div class="portfolio-note" style="grid-column:1/-1">Assumes a flat $${STAKE} stake per opportunity at the suggested entry, marked to the live stock price daily. Strategy P&L (straddle/call) is ESTIMATED, not real options pricing &mdash; see notes per trade. ${openT.length} positions still open.</div>`;
+}
+renderPortfolio();
 
 const active = DATA.filter(o=>o.status==='ACTIVE').sort((a,b)=>b.score-a.score);
 const past   = DATA.filter(o=>o.status!=='ACTIVE').sort((a,b)=>new Date(b.event_date)-new Date(a.event_date));
