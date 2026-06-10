@@ -13,7 +13,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from scanner import scan, DEFAULT_TICKERS, get_current_price
+from scanner import scan, DEFAULT_TICKERS, get_current_price, pick_expiry, get_option_quote
 
 OPPS_FILE = os.path.join(os.path.dirname(__file__), "opportunities.json")
 HTML_FILE = os.path.join(os.path.dirname(__file__), "index.html")
@@ -57,6 +57,55 @@ def calc_pnl(opp):
     return pct, f"stock {pct:+.1f}% from entry"
 
 
+def set_option_baseline(opp):
+    """Pretend we bought the suggested option(s) today; record today's premium as cost basis."""
+    strategy = opp.get("strategy", "")
+    if "STRADDLE" not in strategy and "LONG CALL" not in strategy:
+        return False
+    ticker    = opp["ticker"]
+    exit_date = date.fromisoformat(opp["exit_date"])
+    expiry    = pick_expiry(ticker, exit_date)
+    spot      = opp.get("current_stock_price")
+    if not expiry or not spot:
+        return False
+
+    legs = ["CALL", "PUT"] if "STRADDLE" in strategy else ["CALL"]
+    cost, strike = 0, None
+    for kind in legs:
+        premium, used_strike = get_option_quote(ticker, expiry, spot, kind)
+        if premium is None:
+            return False
+        cost += premium
+        strike = used_strike
+
+    opp["option_expiry"]            = expiry
+    opp["option_strike"]            = strike
+    opp["option_legs"]              = legs
+    opp["option_cost"]              = round(cost, 2)
+    opp["option_current_value"]     = round(cost, 2)
+    opp["option_entry_date"]        = TODAY.isoformat()
+    opp["option_entry_stock_price"] = spot
+    opp["pnl_pct"]  = 0.0
+    opp["pnl_note"] = f"Bought today @ ${round(cost,2)} premium ({'/'.join(legs)} ${strike}, exp {expiry}) (REAL)"
+    return True
+
+
+def update_option_pnl(opp):
+    ticker, expiry, strike, legs = opp["ticker"], opp["option_expiry"], opp["option_strike"], opp["option_legs"]
+    value = 0
+    for kind in legs:
+        premium, _ = get_option_quote(ticker, expiry, strike, kind)
+        if premium is None:
+            return False
+        value += premium
+    cost = opp["option_cost"]
+    pnl  = round((value - cost) / cost * 100, 1) if cost else None
+    opp["option_current_value"] = round(value, 2)
+    opp["pnl_pct"]  = pnl
+    opp["pnl_note"] = f"Premium ${cost} -> ${round(value,2)} ({pnl:+.1f}%, REAL)" if pnl is not None else "premium unavailable"
+    return True
+
+
 def update_prices(opps):
     if TODAY.weekday() >= 5:  # 5=Saturday, 6=Sunday
         print("  Skipping price refresh - market closed on weekends.")
@@ -68,13 +117,24 @@ def update_prices(opps):
         price = get_current_price(opp["ticker"])
         if price:
             opp["current_stock_price"] = price
+            updated += 1
+        else:
+            print(f"  {opp['ticker']}: price fetch failed, keeping last known")
+
+        strategy = opp.get("strategy", "")
+        if "STRADDLE" in strategy or "LONG CALL" in strategy:
+            if not opp.get("option_cost"):
+                if set_option_baseline(opp):
+                    print(f"  {opp['ticker']}: option cost basis set @ ${opp['option_cost']}")
+                else:
+                    print(f"  {opp['ticker']}: could not fetch option chain, leaving as estimate")
+            elif update_option_pnl(opp):
+                print(f"  {opp['ticker']}: option value ${opp['option_current_value']} | P&L: {opp['pnl_pct']}%")
+        elif price:
             pnl, note = calc_pnl(opp)
             opp["pnl_pct"]  = pnl
             opp["pnl_note"] = note
             print(f"  {opp['ticker']}: ${price} | P&L: {pnl}%")
-            updated += 1
-        else:
-            print(f"  {opp['ticker']}: price fetch failed, keeping last known")
         time.sleep(0.3)
     active_count = sum(1 for o in opps if o["status"] == "ACTIVE")
     print(f"  {updated}/{active_count} prices updated.")
@@ -272,7 +332,7 @@ function card(o){{
   const chg   = o.current_stock_price&&o.entry_stock_price
     ? ((o.current_stock_price-o.entry_stock_price)/o.entry_stock_price*100).toFixed(1) : null;
   const pnlH  = o.pnl_pct!==null&&o.pnl_pct!==undefined
-    ? `<div class="pnl-box ${{pnlCls(o.pnl_pct)}}"><strong>Est. P&L: ${{o.pnl_pct>=0?'+':''}}${{o.pnl_pct}}%</strong>${{o.pnl_note?`<br><span style="font-size:11px">${{o.pnl_note}}</span>`:''}}
+    ? `<div class="pnl-box ${{pnlCls(o.pnl_pct)}}"><strong>P&L: ${{o.pnl_pct>=0?'+':''}}${{o.pnl_pct}}%</strong>${{o.pnl_note?`<br><span style="font-size:11px">${{o.pnl_note}}</span>`:''}}
 </div>` : '';
   return `<div class="card ${{cls}}">
     <div class="card-header">
@@ -340,7 +400,7 @@ function renderPortfolio(){{
     <div class="stat"><div class="v ${{cls(totalRoi)}}">${{fmtPct(totalRoi)}}</div><div class="l">Overall ROI</div></div>
     <div class="stat"><div class="v ${{cls(closedRoi)}}">${{closed.length?fmtPct(closedRoi):'--'}}</div><div class="l">Closed-Trade ROI (${{closed.length}})</div></div>
     <div class="stat"><div class="v">${{winRate!==null?winRate.toFixed(0)+'%':'--'}}</div><div class="l">Win Rate (Closed)</div></div>
-  ` + `<div class="portfolio-note" style="grid-column:1/-1">Assumes a flat $${{STAKE}} stake per opportunity at the suggested entry, marked to the live stock price daily. Strategy P&L (straddle/call) is ESTIMATED, not real options pricing &mdash; see notes per trade. ${{openT.length}} positions still open.</div>`;
+  ` + `<div class="portfolio-note" style="grid-column:1/-1">Assumes a flat $${{STAKE}} stake per opportunity. STRADDLE/LONG CALL positions are tracked against real option premiums (entry cost recorded the day the trade was added, marked to live bid/ask daily); SHARES/DAY TRADE positions track the underlying stock price. ${{openT.length}} positions still open.</div>`;
 }}
 renderPortfolio();
 
