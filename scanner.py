@@ -7,7 +7,13 @@ import pandas as pd
 from datetime import datetime, date
 import time
 import warnings
+from curl_cffi import requests as cffi_requests
 warnings.filterwarnings("ignore")
+
+# Yahoo Finance blocks/rate-limits plain `requests` traffic from cloud IPs
+# (e.g. GitHub Actions runners). Impersonating a browser via curl_cffi works
+# around this; see yfinance's recommended setup for cloud environments.
+SESSION = cffi_requests.Session(impersonate="chrome")
 
 TWELVEDATA_KEY = "7fd7d28f2b1947e7bb8e9f34406aba0c"
 
@@ -28,7 +34,7 @@ LOOKAHEAD_DAYS = 90
 
 def get_earnings_date(ticker):
     try:
-        t = yf.Ticker(ticker)
+        t = yf.Ticker(ticker, session=SESSION)
         cal = t.calendar
         if not cal:
             return None, None
@@ -48,7 +54,7 @@ def get_earnings_date(ticker):
 
 def get_options_expected_move(ticker):
     try:
-        t = yf.Ticker(ticker)
+        t = yf.Ticker(ticker, session=SESSION)
         exps = t.options
         if not exps:
             return None
@@ -76,7 +82,7 @@ def get_options_expected_move(ticker):
 
 def get_historical_reactions(ticker, n_events=6):
     try:
-        t = yf.Ticker(ticker)
+        t = yf.Ticker(ticker, session=SESSION)
         hist = t.history(period="2y", interval="1d")
         if hist.empty:
             return {}
@@ -111,7 +117,7 @@ def get_historical_reactions(ticker, n_events=6):
 
 def get_recent_momentum(ticker, days=5):
     try:
-        t = yf.Ticker(ticker)
+        t = yf.Ticker(ticker, session=SESSION)
         hist = t.history(period="10d", interval="1d")
         if len(hist) < 2:
             return None
@@ -124,7 +130,7 @@ def get_recent_momentum(ticker, days=5):
 
 def get_current_price(ticker):
     try:
-        t = yf.Ticker(ticker)
+        t = yf.Ticker(ticker, session=SESSION)
         p = t.fast_info.get("lastPrice") or t.fast_info.get("regularMarketPrice")
         return round(float(p), 2) if p else None
     except Exception:
@@ -134,7 +140,7 @@ def get_current_price(ticker):
 def pick_expiry(ticker, on_or_after):
     """First available option expiry on/after the given date."""
     try:
-        t = yf.Ticker(ticker)
+        t = yf.Ticker(ticker, session=SESSION)
         for exp in t.options:
             d = datetime.strptime(exp, "%Y-%m-%d").date()
             if d >= on_or_after:
@@ -147,7 +153,7 @@ def pick_expiry(ticker, on_or_after):
 def get_option_quote(ticker, expiry, strike, kind):
     """Mid (bid/ask) premium for the contract nearest `strike`. Returns (premium, actual_strike)."""
     try:
-        t = yf.Ticker(ticker)
+        t = yf.Ticker(ticker, session=SESSION)
         chain = t.option_chain(expiry)
         df = (chain.calls if kind == "CALL" else chain.puts).set_index("strike")
         if df.empty:
