@@ -20,7 +20,7 @@
     "notes": "big avg move 10.5%; IV underpricing history; momentum confirms bullish bias",
     "status": "ACTIVE",
     "pnl_pct": 0.0,
-    "pnl_note": "Bought today @ $40.2 premium (CALL/PUT $110.0, exp 2026-08-21) (REAL)",
+    "pnl_note": "Premium quote unavailable - cost $40.2 (entered 2026-06-09, REAL)",
     "option_expiry": "2026-08-21",
     "option_strike": 110.0,
     "option_legs": [
@@ -53,7 +53,7 @@
     "notes": "bullish bias 80% wins; IV underpricing history",
     "status": "ACTIVE",
     "pnl_pct": 0.0,
-    "pnl_note": "Bought today @ $17.0 premium (CALL $365.0, exp 2026-07-24) (REAL)",
+    "pnl_note": "Premium quote unavailable - cost $17.0 (entered 2026-06-09, REAL)",
     "option_expiry": "2026-07-24",
     "option_strike": 365.0,
     "option_legs": [
@@ -85,7 +85,7 @@
     "notes": "moderate avg move 9.2%; IV underpricing history",
     "status": "ACTIVE",
     "pnl_pct": 0.0,
-    "pnl_note": "Bought today @ $82.24 premium (CALL/PUT $585.0, exp 2026-08-21) (REAL)",
+    "pnl_note": "Premium quote unavailable - cost $82.24 (entered 2026-06-09, REAL)",
     "option_expiry": "2026-08-21",
     "option_strike": 585.0,
     "option_legs": [
@@ -164,7 +164,7 @@
     "notes": "moderate avg move 5.2%; momentum confirms bullish bias",
     "status": "ACTIVE",
     "pnl_pct": 0.0,
-    "pnl_note": "Bought today @ $6.92 premium (CALL/PUT $22.0, exp 2026-09-18) (REAL)",
+    "pnl_note": "Premium quote unavailable - cost $6.92 (entered 2026-06-09, REAL)",
     "option_expiry": "2026-09-18",
     "option_strike": 22.0,
     "option_legs": [
@@ -197,7 +197,7 @@
     "notes": "moderate avg move 6.4%; bearish bias 83% drops",
     "status": "ACTIVE",
     "pnl_pct": 0.0,
-    "pnl_note": "Bought today @ $13.56 premium (CALL/PUT $27.0, exp 2026-09-18) (REAL)",
+    "pnl_note": "Premium quote unavailable - cost $13.56 (entered 2026-06-09, REAL)",
     "option_expiry": "2026-09-18",
     "option_strike": 27.0,
     "option_legs": [
@@ -230,7 +230,7 @@
     "notes": "bullish bias 83% wins; momentum confirms bullish bias",
     "status": "ACTIVE",
     "pnl_pct": 0.0,
-    "pnl_note": "Bought today @ $15.15 premium (CALL $215.0, exp 2026-08-21) (REAL)",
+    "pnl_note": "Premium quote unavailable - cost $15.15 (entered 2026-06-09, REAL)",
     "option_expiry": "2026-08-21",
     "option_strike": 215.0,
     "option_legs": [
@@ -262,7 +262,7 @@
     "notes": "moderate avg move 7.4%; bearish bias 83% drops",
     "status": "ACTIVE",
     "pnl_pct": 0.0,
-    "pnl_note": "Bought today @ $14.46 premium (CALL/PUT $48.0, exp 2026-08-21) (REAL)",
+    "pnl_note": "Premium quote unavailable - cost $14.46 (entered 2026-06-09, REAL)",
     "option_expiry": "2026-08-21",
     "option_strike": 48.0,
     "option_legs": [
