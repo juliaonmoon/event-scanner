@@ -4,6 +4,37 @@ All notable changes to the Event Scanner project. Routine "Daily scan" data
 refreshes (automated, run every morning by GitHub Actions) are not listed
 individually — only code/feature changes.
 
+## 2026-06-11
+
+### Fixed
+- **Stale "Bought today" P&L note** — `pnl_note` for option positions hardcoded
+  "Bought today" at entry time and was only refreshed by a successful daily
+  option-quote pull. When that pull failed, the stale "today" wording persisted
+  into later days, making positions opened yesterday (or earlier) look like
+  they were opened today. `pnl_note` now embeds the actual entry date, and a
+  failed quote refresh writes an explicit "Premium quote unavailable (entered
+  <date>)" note instead of leaving the old text. (PR #4)
+
+### Attempted fix / still open
+- **Option premium + price quotes fail on every GitHub Actions run** —
+  `get_current_price()` and `get_option_quote()` (yfinance) return `None` for
+  every ticker when run from GitHub Actions ("possibly delisted; no price data
+  found", "0/9 prices updated"), even though the same code works fine locally.
+  Likely cause: Yahoo Finance blocks/rate-limits GitHub-hosted runner IP ranges.
+  - PR #5 routed all yfinance `Ticker` calls through a `curl_cffi` Chrome-
+    impersonation session (yfinance's documented cloud workaround). **Did not
+    fix it** — yfinance 0.2.54 already uses curl_cffi internally by default, so
+    this had no effect. Verified via a manual workflow run (27331025227): still
+    "possibly delisted" for all tickers.
+  - Real fix likely requires switching price data to the Twelve Data API
+    (`TWELVEDATA_KEY` already in `scanner.py`, not currently used) for
+    `get_current_price()`. Twelve Data has no options-chain endpoint, so
+    `get_option_quote()` (real option P&L) may need a different data source or
+    will remain "unavailable" on CI until one is found.
+  - **Separately:** `TWELVEDATA_KEY` is currently hardcoded in `scanner.py` in
+    this public repo — needs to move to a GitHub secret and be rotated
+    (scheduled for 2026-06-12 10:00 AM).
+
 ## 2026-06-09
 
 ### Added
