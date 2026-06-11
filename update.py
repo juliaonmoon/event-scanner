@@ -86,7 +86,7 @@ def set_option_baseline(opp):
     opp["option_entry_date"]        = TODAY.isoformat()
     opp["option_entry_stock_price"] = spot
     opp["pnl_pct"]  = 0.0
-    opp["pnl_note"] = f"Bought today @ ${round(cost,2)} premium ({'/'.join(legs)} ${strike}, exp {expiry}) (REAL)"
+    opp["pnl_note"] = f"Bought {TODAY.isoformat()} @ ${round(cost,2)} premium ({'/'.join(legs)} ${strike}, exp {expiry}) (REAL)"
     return True
 
 
@@ -96,6 +96,8 @@ def update_option_pnl(opp):
     for kind in legs:
         premium, _ = get_option_quote(ticker, expiry, strike, kind)
         if premium is None:
+            entry_date = opp.get("option_entry_date", "?")
+            opp["pnl_note"] = f"Premium quote unavailable - cost ${opp['option_cost']} (entered {entry_date}, REAL)"
             return False
         value += premium
     cost = opp["option_cost"]
