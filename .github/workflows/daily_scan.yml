@@ -1,8 +1,9 @@
 name: Daily Event Scan
 
 on:
-  schedule:
-    - cron: '0 14 * * *'   # 6:00 AM PST (UTC-8) / 7:00 AM PDT (UTC-7)
+  # Daily schedule disabled 2026-06-12 - moved to VPS cron (vps_daily_run.sh)
+  # for a dedicated IP (yfinance reliability) and to avoid GitHub Actions
+  # scheduling delays. Kept as workflow_dispatch for manual runs.
   workflow_dispatch:        # allow manual trigger from GitHub UI
 
 permissions:
