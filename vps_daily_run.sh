@@ -12,7 +12,7 @@ python3 update.py
 
 git config user.name "event-scanner-vps"
 git config user.email "vps@juliaonmoon.local"
-git add opportunities.json index.html
+git add opportunities.json index.html calendar.html calendar_events.json
 if ! git diff --staged --quiet; then
   git commit -m "Daily scan $(date -u '+%Y-%m-%d %H:%M UTC') (VPS)"
   git push origin main
