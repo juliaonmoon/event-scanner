@@ -148,13 +148,65 @@ def build_events():
 
 
 TYPE_META = {
-    "FOMC":     {"color": "#f85149", "name": "Fed / FOMC"},
-    "JOBS":     {"color": "#f0883e", "name": "Jobs Report"},
-    "CPI":      {"color": "#d29922", "name": "CPI"},
-    "PPI":      {"color": "#9e6a03", "name": "PPI"},
-    "GDP":      {"color": "#bc8cff", "name": "GDP"},
-    "EARNINGS": {"color": "#58a6ff", "name": "Earnings"},
-    "IPO":      {"color": "#3fb950", "name": "IPO"},
+    "FOMC": {
+        "color": "#f85149", "name": "Fed / FOMC",
+        "desc": "The Federal Reserve's rate-setting committee announces its interest "
+                "rate decision (\"Fed day\"). 4 of the 8 meetings/year also release the "
+                "Summary of Economic Projections (the \"dot plot\"), which tends to move "
+                "markets more than meetings without it.",
+        "source": "Hardcoded from federalreserve.gov/monetarypolicy — published ~1 year ahead, doesn't change except for rare emergency meetings.",
+        "freq": "8x/year",
+    },
+    "JOBS": {
+        "color": "#f0883e", "name": "Jobs Report",
+        "desc": "BLS \"Employment Situation\" report — nonfarm payrolls (NFP), unemployment "
+                "rate, wage growth. One of the most-watched monthly macro releases; surprises "
+                "move rate-cut/hike expectations and the whole market.",
+        "source": "Hardcoded from bls.gov/schedule — released 8:30 AM ET, typically the first Friday of the month.",
+        "freq": "Monthly",
+    },
+    "CPI": {
+        "color": "#d29922", "name": "CPI",
+        "desc": "Consumer Price Index — the primary inflation gauge. Hotter-than-expected "
+                "CPI tends to push rate-cut expectations out (bearish for stocks); cooler CPI "
+                "tends to do the opposite.",
+        "source": "Hardcoded from bls.gov/schedule — released 8:30 AM ET, ~2 weeks into the following month.",
+        "freq": "Monthly",
+    },
+    "PPI": {
+        "color": "#9e6a03", "name": "PPI",
+        "desc": "Producer Price Index — wholesale/input-cost inflation, one day after CPI. "
+                "Leading indicator for future consumer inflation; usually moves markets less "
+                "than CPI unless it diverges sharply from it.",
+        "source": "Hardcoded from bls.gov/schedule — released 8:30 AM ET, the day after CPI.",
+        "freq": "Monthly",
+    },
+    "GDP": {
+        "color": "#bc8cff", "name": "GDP",
+        "desc": "Advance estimate of quarterly Gross Domestic Product growth — the headline "
+                "growth number for the economy. Only the first (\"advance\") release per "
+                "quarter is shown here; the 2nd/3rd revisions usually move markets less.",
+        "source": "Hardcoded from bea.gov/news/schedule — released ~1 month after quarter-end.",
+        "freq": "Quarterly",
+    },
+    "EARNINGS": {
+        "color": "#58a6ff", "name": "Earnings",
+        "desc": "Company-reported quarterly earnings date for a notable/high-liquidity "
+                "ticker (your scanner watchlist plus mega-cap tech/financials/industrials/"
+                "retail). Single-stock event, but Mag-7-type names can move the whole market "
+                "on a big surprise.",
+        "source": "Live via yfinance's earnings calendar — only as far out as Yahoo has confirmed a date (typically up to ~90 days).",
+        "freq": "Quarterly per ticker",
+    },
+    "IPO": {
+        "color": "#3fb950", "name": "IPO",
+        "desc": "A company's initial public offering / market debut date.",
+        "source": "Best-effort scrape of stockanalysis.com's public IPO calendar. IPO dates "
+                  "are rarely confirmed industry-wide more than 1-2 weeks ahead, so don't "
+                  "expect this to populate far into the future even though the calendar "
+                  "spans all of 2026 — that's a data-availability limit, not a bug.",
+        "freq": "As scheduled",
+    },
 }
 
 
@@ -163,7 +215,15 @@ def generate_calendar_html(events, out_path):
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M PST")
     data_json = json.dumps(events)
     legend_html = "".join(
-        f'<div class="legend-item"><span class="dot" style="background:{m["color"]}"></span>{m["name"]}</div>'
+        f'<div class="legend-item" title="{m["desc"]}"><span class="dot" style="background:{m["color"]}"></span>{m["name"]}</div>'
+        for m in TYPE_META.values()
+    )
+    definitions_html = "".join(
+        f'''<div class="def-card">
+      <div class="def-title"><span class="dot" style="background:{m["color"]}"></span>{m["name"]} <span class="def-freq">{m["freq"]}</span></div>
+      <div class="def-desc">{m["desc"]}</div>
+      <div class="def-source">{m["source"]}</div>
+    </div>'''
         for m in TYPE_META.values()
     )
     type_meta_json = json.dumps(TYPE_META)
@@ -200,6 +260,13 @@ def generate_calendar_html(events, out_path):
     .day.today .day-num{{color:#58a6ff;font-weight:700}}
     .chip{{display:block;font-size:10px;border-radius:3px;padding:2px 4px;margin-bottom:2px;color:#0d1117;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:default}}
     .more{{font-size:10px;color:#8b949e;margin-top:2px}}
+    .section-title{{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#8b949e;margin:28px 0 12px;padding-bottom:8px;border-bottom:1px solid #21262d}}
+    .def-grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}}
+    .def-card{{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:14px}}
+    .def-title{{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;margin-bottom:8px}}
+    .def-freq{{font-size:11px;color:#8b949e;font-weight:400;margin-left:auto;text-transform:uppercase;letter-spacing:.03em}}
+    .def-desc{{font-size:12px;color:#c9d1d9;line-height:1.5;margin-bottom:8px}}
+    .def-source{{font-size:11px;color:#8b949e;line-height:1.4;padding-top:8px;border-top:1px solid #21262d}}
   </style>
 </head>
 <body>
@@ -218,6 +285,8 @@ def generate_calendar_html(events, out_path):
     <button id="next-month">&rarr;</button>
   </div>
   <div class="grid" id="cal-grid"></div>
+  <div class="section-title">Event Definitions</div>
+  <div class="def-grid">{definitions_html}</div>
 </div>
 <script>
 const EVENTS = {data_json};
