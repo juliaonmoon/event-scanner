@@ -1,5 +1,125 @@
 [
   {
+    "date": "2026-01-09",
+    "type": "JOBS",
+    "label": "Jobs Report (NFP)"
+  },
+  {
+    "date": "2026-01-13",
+    "type": "CPI",
+    "label": "CPI Release"
+  },
+  {
+    "date": "2026-01-14",
+    "type": "PPI",
+    "label": "PPI Release"
+  },
+  {
+    "date": "2026-01-28",
+    "type": "FOMC",
+    "label": "FOMC Rate Decision"
+  },
+  {
+    "date": "2026-01-29",
+    "type": "GDP",
+    "label": "GDP Advance Estimate (4Q'25)"
+  },
+  {
+    "date": "2026-02-06",
+    "type": "JOBS",
+    "label": "Jobs Report (NFP)"
+  },
+  {
+    "date": "2026-02-11",
+    "type": "CPI",
+    "label": "CPI Release"
+  },
+  {
+    "date": "2026-02-12",
+    "type": "PPI",
+    "label": "PPI Release"
+  },
+  {
+    "date": "2026-03-06",
+    "type": "JOBS",
+    "label": "Jobs Report (NFP)"
+  },
+  {
+    "date": "2026-03-11",
+    "type": "CPI",
+    "label": "CPI Release"
+  },
+  {
+    "date": "2026-03-12",
+    "type": "PPI",
+    "label": "PPI Release"
+  },
+  {
+    "date": "2026-03-18",
+    "type": "FOMC",
+    "label": "FOMC Rate Decision"
+  },
+  {
+    "date": "2026-04-03",
+    "type": "JOBS",
+    "label": "Jobs Report (NFP)"
+  },
+  {
+    "date": "2026-04-10",
+    "type": "CPI",
+    "label": "CPI Release"
+  },
+  {
+    "date": "2026-04-14",
+    "type": "PPI",
+    "label": "PPI Release"
+  },
+  {
+    "date": "2026-04-29",
+    "type": "FOMC",
+    "label": "FOMC Rate Decision"
+  },
+  {
+    "date": "2026-04-30",
+    "type": "GDP",
+    "label": "GDP Advance Estimate (1Q'26)"
+  },
+  {
+    "date": "2026-05-08",
+    "type": "JOBS",
+    "label": "Jobs Report (NFP)"
+  },
+  {
+    "date": "2026-05-12",
+    "type": "CPI",
+    "label": "CPI Release"
+  },
+  {
+    "date": "2026-05-13",
+    "type": "PPI",
+    "label": "PPI Release"
+  },
+  {
+    "date": "2026-06-05",
+    "type": "JOBS",
+    "label": "Jobs Report (NFP)"
+  },
+  {
+    "date": "2026-06-10",
+    "type": "CPI",
+    "label": "CPI Release"
+  },
+  {
+    "date": "2026-06-11",
+    "type": "PPI",
+    "label": "PPI Release"
+  },
+  {
+    "date": "2026-06-17",
+    "type": "FOMC",
+    "label": "FOMC Rate Decision"
+  },
+  {
     "date": "2026-06-24",
     "type": "IPO",
     "label": "ALPX IPO — Alopexx, Inc.",
@@ -310,5 +430,65 @@
     "date": "2026-09-16",
     "type": "FOMC",
     "label": "FOMC Rate Decision"
+  },
+  {
+    "date": "2026-10-02",
+    "type": "JOBS",
+    "label": "Jobs Report (NFP)"
+  },
+  {
+    "date": "2026-10-14",
+    "type": "CPI",
+    "label": "CPI Release"
+  },
+  {
+    "date": "2026-10-15",
+    "type": "PPI",
+    "label": "PPI Release"
+  },
+  {
+    "date": "2026-10-28",
+    "type": "FOMC",
+    "label": "FOMC Rate Decision"
+  },
+  {
+    "date": "2026-10-29",
+    "type": "GDP",
+    "label": "GDP Advance Estimate (3Q'26)"
+  },
+  {
+    "date": "2026-11-06",
+    "type": "JOBS",
+    "label": "Jobs Report (NFP)"
+  },
+  {
+    "date": "2026-11-10",
+    "type": "CPI",
+    "label": "CPI Release"
+  },
+  {
+    "date": "2026-11-13",
+    "type": "PPI",
+    "label": "PPI Release"
+  },
+  {
+    "date": "2026-12-04",
+    "type": "JOBS",
+    "label": "Jobs Report (NFP)"
+  },
+  {
+    "date": "2026-12-09",
+    "type": "FOMC",
+    "label": "FOMC Rate Decision"
+  },
+  {
+    "date": "2026-12-10",
+    "type": "CPI",
+    "label": "CPI Release"
+  },
+  {
+    "date": "2026-12-15",
+    "type": "PPI",
+    "label": "PPI Release"
   }
 ]

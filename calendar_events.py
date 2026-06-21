@@ -1,10 +1,10 @@
 """
-Market events calendar — macro releases, notable earnings, and IPOs for the
-next few months. Links from/to the main event-scanner dashboard.
+Market events calendar — macro releases (full 2026 calendar), notable
+earnings, and IPOs. Links from/to the main event-scanner dashboard.
 """
 import json
 import re
-from datetime import date, timedelta
+from datetime import date
 
 import requests
 
@@ -133,14 +133,16 @@ def _parse_us_date(s):
 
 
 # --- Combine + render ---------------------------------------------------------
-LOOKAHEAD_DAYS = 90
+# Macro events are hardcoded for the full 2026 calendar (see lists above) and
+# shown in full, regardless of date, so the calendar populates all 12 months.
+# Earnings and IPOs are left as-is from their fetchers, which are naturally
+# bounded by what their data sources actually report (yfinance only confirms
+# earnings dates ~90 days out; IPOs are rarely confirmed more than 1-2 weeks
+# out) — there's no hardcoded cutoff to apply on top of that.
 
 
 def build_events():
-    today = date.today()
-    cutoff = today + timedelta(days=LOOKAHEAD_DAYS)
     events = get_macro_events() + get_earnings_events() + get_ipo_events()
-    events = [e for e in events if today.isoformat() <= e["date"] <= cutoff.isoformat()]
     events.sort(key=lambda e: e["date"])
     return events
 
