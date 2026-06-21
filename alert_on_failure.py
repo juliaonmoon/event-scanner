@@ -28,7 +28,10 @@ def send_alert(conf, subject, body):
         "https://api.resend.com/emails",
         data=payload,
         headers={"Authorization": f"Bearer {conf['resend_api_key']}",
-                 "Content-Type": "application/json"},
+                 "Content-Type": "application/json",
+                 # Resend sits behind Cloudflare, which blocks the default
+                 # urllib User-Agent (error code 1010) as a bot signature.
+                 "User-Agent": "Mozilla/5.0"},
         method="POST",
     )
     with urllib.request.urlopen(req, timeout=15) as resp:
