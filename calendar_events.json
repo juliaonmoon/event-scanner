@@ -128,8 +128,26 @@
   {
     "date": "2026-06-25",
     "type": "IPO",
+    "label": "CGCF IPO — Cartesian Growth Corporation IV",
+    "ticker": "CGCF"
+  },
+  {
+    "date": "2026-06-25",
+    "type": "IPO",
     "label": "DPC IPO — DPC Holdings PLC",
     "ticker": "DPC"
+  },
+  {
+    "date": "2026-06-25",
+    "type": "IPO",
+    "label": "DSC IPO — DSC Holdings Ltd.",
+    "ticker": "DSC"
+  },
+  {
+    "date": "2026-06-25",
+    "type": "IPO",
+    "label": "FWAC IPO — Futurewave Acquisition Corporation",
+    "ticker": "FWAC"
   },
   {
     "date": "2026-06-26",
