@@ -120,40 +120,16 @@
     "label": "FOMC Rate Decision"
   },
   {
-    "date": "2026-06-25",
-    "type": "IPO",
-    "label": "ALPX IPO — Alopexx, Inc.",
-    "ticker": "ALPX"
-  },
-  {
-    "date": "2026-06-25",
-    "type": "IPO",
-    "label": "CGCF IPO — Cartesian Growth Corporation IV",
-    "ticker": "CGCF"
-  },
-  {
-    "date": "2026-06-25",
-    "type": "IPO",
-    "label": "DPC IPO — DPC Holdings PLC",
-    "ticker": "DPC"
-  },
-  {
-    "date": "2026-06-25",
-    "type": "IPO",
-    "label": "DSC IPO — DSC Holdings Ltd.",
-    "ticker": "DSC"
-  },
-  {
-    "date": "2026-06-25",
-    "type": "IPO",
-    "label": "FWAC IPO — Futurewave Acquisition Corporation",
-    "ticker": "FWAC"
-  },
-  {
     "date": "2026-06-26",
     "type": "IPO",
     "label": "MOT IPO — MetaOptics Ltd",
     "ticker": "MOT"
+  },
+  {
+    "date": "2026-06-26",
+    "type": "IPO",
+    "label": "SIND IPO — Sinda Ltd.",
+    "ticker": "SIND"
   },
   {
     "date": "2026-07-02",
@@ -448,6 +424,12 @@
     "date": "2026-09-16",
     "type": "FOMC",
     "label": "FOMC Rate Decision"
+  },
+  {
+    "date": "2026-09-24",
+    "type": "EARNINGS",
+    "label": "COST Earnings",
+    "ticker": "COST"
   },
   {
     "date": "2026-10-02",
