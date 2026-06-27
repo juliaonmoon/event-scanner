@@ -120,21 +120,39 @@
     "label": "FOMC Rate Decision"
   },
   {
-    "date": "2026-06-26",
+    "date": "2026-07-01",
     "type": "IPO",
-    "label": "MOT IPO — MetaOptics Ltd",
-    "ticker": "MOT"
+    "label": "BSP IPO — Bending Spoons S.p.A.",
+    "ticker": "BSP"
   },
   {
-    "date": "2026-06-26",
+    "date": "2026-07-01",
     "type": "IPO",
-    "label": "SIND IPO — Sinda Ltd.",
-    "ticker": "SIND"
+    "label": "CUX IPO — CopperTech Metals Inc.",
+    "ticker": "CUX"
+  },
+  {
+    "date": "2026-07-01",
+    "type": "IPO",
+    "label": "ITG IPO — ITG, Inc.",
+    "ticker": "ITG"
+  },
+  {
+    "date": "2026-07-01",
+    "type": "IPO",
+    "label": "LIME IPO — Neutron Holdings, Inc.",
+    "ticker": "LIME"
   },
   {
     "date": "2026-07-02",
     "type": "JOBS",
     "label": "Jobs Report (NFP)"
+  },
+  {
+    "date": "2026-07-02",
+    "type": "IPO",
+    "label": "MOT IPO — MetaOptics Ltd",
+    "ticker": "MOT"
   },
   {
     "date": "2026-07-14",
