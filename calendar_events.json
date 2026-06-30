@@ -120,6 +120,12 @@
     "label": "FOMC Rate Decision"
   },
   {
+    "date": "2026-06-30",
+    "type": "IPO",
+    "label": "AAC IPO — Ares Acquisition Corporation III",
+    "ticker": "AAC"
+  },
+  {
     "date": "2026-07-01",
     "type": "IPO",
     "label": "BSP IPO — Bending Spoons S.p.A.",
@@ -245,12 +251,6 @@
   {
     "date": "2026-07-28",
     "type": "EARNINGS",
-    "label": "SBUX Earnings",
-    "ticker": "SBUX"
-  },
-  {
-    "date": "2026-07-28",
-    "type": "EARNINGS",
     "label": "V Earnings",
     "ticker": "V"
   },
@@ -270,6 +270,12 @@
     "type": "EARNINGS",
     "label": "MSFT Earnings",
     "ticker": "MSFT"
+  },
+  {
+    "date": "2026-07-29",
+    "type": "EARNINGS",
+    "label": "SBUX Earnings",
+    "ticker": "SBUX"
   },
   {
     "date": "2026-07-30",
