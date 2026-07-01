@@ -120,12 +120,6 @@
     "label": "FOMC Rate Decision"
   },
   {
-    "date": "2026-06-30",
-    "type": "IPO",
-    "label": "AAC IPO — Ares Acquisition Corporation III",
-    "ticker": "AAC"
-  },
-  {
     "date": "2026-07-01",
     "type": "IPO",
     "label": "BSP IPO — Bending Spoons S.p.A.",
@@ -148,6 +142,12 @@
     "type": "IPO",
     "label": "LIME IPO — Neutron Holdings, Inc.",
     "ticker": "LIME"
+  },
+  {
+    "date": "2026-07-01",
+    "type": "IPO",
+    "label": "OSPR IPO — Osprey Acquisition Corp. III",
+    "ticker": "OSPR"
   },
   {
     "date": "2026-07-02",
@@ -225,12 +225,6 @@
     "ticker": "NOC"
   },
   {
-    "date": "2026-07-21",
-    "type": "EARNINGS",
-    "label": "RTX Earnings",
-    "ticker": "RTX"
-  },
-  {
     "date": "2026-07-22",
     "type": "EARNINGS",
     "label": "TSLA Earnings",
@@ -241,6 +235,12 @@
     "type": "EARNINGS",
     "label": "GOOGL Earnings",
     "ticker": "GOOGL"
+  },
+  {
+    "date": "2026-07-23",
+    "type": "EARNINGS",
+    "label": "RTX Earnings",
+    "ticker": "RTX"
   },
   {
     "date": "2026-07-28",
