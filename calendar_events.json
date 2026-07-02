@@ -120,36 +120,6 @@
     "label": "FOMC Rate Decision"
   },
   {
-    "date": "2026-07-01",
-    "type": "IPO",
-    "label": "BSP IPO — Bending Spoons S.p.A.",
-    "ticker": "BSP"
-  },
-  {
-    "date": "2026-07-01",
-    "type": "IPO",
-    "label": "CUX IPO — CopperTech Metals Inc.",
-    "ticker": "CUX"
-  },
-  {
-    "date": "2026-07-01",
-    "type": "IPO",
-    "label": "ITG IPO — ITG, Inc.",
-    "ticker": "ITG"
-  },
-  {
-    "date": "2026-07-01",
-    "type": "IPO",
-    "label": "LIME IPO — Neutron Holdings, Inc.",
-    "ticker": "LIME"
-  },
-  {
-    "date": "2026-07-01",
-    "type": "IPO",
-    "label": "OSPR IPO — Osprey Acquisition Corp. III",
-    "ticker": "OSPR"
-  },
-  {
     "date": "2026-07-02",
     "type": "JOBS",
     "label": "Jobs Report (NFP)"
@@ -215,12 +185,6 @@
   {
     "date": "2026-07-21",
     "type": "EARNINGS",
-    "label": "LMT Earnings",
-    "ticker": "LMT"
-  },
-  {
-    "date": "2026-07-21",
-    "type": "EARNINGS",
     "label": "NOC Earnings",
     "ticker": "NOC"
   },
@@ -235,6 +199,12 @@
     "type": "EARNINGS",
     "label": "GOOGL Earnings",
     "ticker": "GOOGL"
+  },
+  {
+    "date": "2026-07-23",
+    "type": "EARNINGS",
+    "label": "LMT Earnings",
+    "ticker": "LMT"
   },
   {
     "date": "2026-07-23",
