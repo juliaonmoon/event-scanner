@@ -125,10 +125,16 @@
     "label": "Jobs Report (NFP)"
   },
   {
-    "date": "2026-07-02",
+    "date": "2026-07-09",
     "type": "IPO",
-    "label": "MOT IPO — MetaOptics Ltd",
-    "ticker": "MOT"
+    "label": "TARX IPO — Tarsier Pharma Ltd.",
+    "ticker": "TARX"
+  },
+  {
+    "date": "2026-07-10",
+    "type": "IPO",
+    "label": "SKHY IPO — SK hynix Inc.",
+    "ticker": "SKHY"
   },
   {
     "date": "2026-07-14",
