@@ -19,8 +19,8 @@
     "momentum_5d": 5.7,
     "notes": "big avg move 10.5%; IV underpricing history; momentum confirms bullish bias",
     "status": "ACTIVE",
-    "pnl_pct": -20.5,
-    "pnl_note": "Premium $40.2 -> $31.96 (-20.5%, REAL)",
+    "pnl_pct": -19.4,
+    "pnl_note": "Premium $40.2 -> $32.4 (-19.4%, REAL)",
     "option_expiry": "2026-08-21",
     "option_strike": 110.0,
     "option_legs": [
@@ -28,7 +28,7 @@
       "PUT"
     ],
     "option_cost": 40.2,
-    "option_current_value": 31.96,
+    "option_current_value": 32.4,
     "option_entry_date": "2026-06-09",
     "option_entry_stock_price": 108.23
   },
@@ -52,15 +52,15 @@
     "momentum_5d": -0.7,
     "notes": "bullish bias 80% wins; IV underpricing history",
     "status": "ACTIVE",
-    "pnl_pct": -41.2,
-    "pnl_note": "Premium $17.0 -> $10.0 (-41.2%, REAL)",
+    "pnl_pct": -40.0,
+    "pnl_note": "Premium $17.0 -> $10.2 (-40.0%, REAL)",
     "option_expiry": "2026-07-24",
     "option_strike": 365.0,
     "option_legs": [
       "CALL"
     ],
     "option_cost": 17.0,
-    "option_current_value": 10.0,
+    "option_current_value": 10.2,
     "option_entry_date": "2026-06-09",
     "option_entry_stock_price": 364.26
   },
@@ -84,8 +84,8 @@
     "momentum_5d": 3.6,
     "notes": "moderate avg move 9.2%; IV underpricing history",
     "status": "ACTIVE",
-    "pnl_pct": -10.7,
-    "pnl_note": "Premium $82.24 -> $73.48 (-10.7%, REAL)",
+    "pnl_pct": -11.3,
+    "pnl_note": "Premium $82.24 -> $72.92 (-11.3%, REAL)",
     "option_expiry": "2026-08-21",
     "option_strike": 585.0,
     "option_legs": [
@@ -93,7 +93,7 @@
       "PUT"
     ],
     "option_cost": 82.24,
-    "option_current_value": 73.48,
+    "option_current_value": 72.92,
     "option_entry_date": "2026-06-09",
     "option_entry_stock_price": 584.59
   },
@@ -163,8 +163,8 @@
     "momentum_5d": 2.7,
     "notes": "moderate avg move 5.2%; momentum confirms bullish bias",
     "status": "ACTIVE",
-    "pnl_pct": -11.1,
-    "pnl_note": "Premium $6.92 -> $6.15 (-11.1%, REAL)",
+    "pnl_pct": -60.1,
+    "pnl_note": "Premium $6.92 -> $2.76 (-60.1%, REAL)",
     "option_expiry": "2026-09-18",
     "option_strike": 22.0,
     "option_legs": [
@@ -172,7 +172,7 @@
       "PUT"
     ],
     "option_cost": 6.92,
-    "option_current_value": 6.15,
+    "option_current_value": 2.76,
     "option_entry_date": "2026-06-09",
     "option_entry_stock_price": 21.84
   },
@@ -196,8 +196,8 @@
     "momentum_5d": 14.6,
     "notes": "moderate avg move 6.4%; bearish bias 83% drops",
     "status": "ACTIVE",
-    "pnl_pct": -18.8,
-    "pnl_note": "Premium $13.56 -> $11.01 (-18.8%, REAL)",
+    "pnl_pct": -21.7,
+    "pnl_note": "Premium $13.56 -> $10.62 (-21.7%, REAL)",
     "option_expiry": "2026-09-18",
     "option_strike": 27.0,
     "option_legs": [
@@ -205,7 +205,7 @@
       "PUT"
     ],
     "option_cost": 13.56,
-    "option_current_value": 11.01,
+    "option_current_value": 10.62,
     "option_entry_date": "2026-06-09",
     "option_entry_stock_price": 27.47
   },
@@ -229,15 +229,15 @@
     "momentum_5d": 5.5,
     "notes": "bullish bias 83% wins; momentum confirms bullish bias",
     "status": "ACTIVE",
-    "pnl_pct": 26.1,
-    "pnl_note": "Premium $15.15 -> $19.1 (+26.1%, REAL)",
+    "pnl_pct": 26.2,
+    "pnl_note": "Premium $15.15 -> $19.12 (+26.2%, REAL)",
     "option_expiry": "2026-08-21",
     "option_strike": 215.0,
     "option_legs": [
       "CALL"
     ],
     "option_cost": 15.15,
-    "option_current_value": 19.1,
+    "option_current_value": 19.12,
     "option_entry_date": "2026-06-09",
     "option_entry_stock_price": 214.51
   },
@@ -261,8 +261,8 @@
     "momentum_5d": 0.7,
     "notes": "moderate avg move 7.4%; bearish bias 83% drops",
     "status": "ACTIVE",
-    "pnl_pct": 131.3,
-    "pnl_note": "Premium $14.46 -> $33.44 (+131.3%, REAL)",
+    "pnl_pct": 114.7,
+    "pnl_note": "Premium $14.46 -> $31.05 (+114.7%, REAL)",
     "option_expiry": "2026-08-21",
     "option_strike": 48.0,
     "option_legs": [
@@ -270,7 +270,7 @@
       "PUT"
     ],
     "option_cost": 14.46,
-    "option_current_value": 33.44,
+    "option_current_value": 31.05,
     "option_entry_date": "2026-06-09",
     "option_entry_stock_price": 47.73
   },
@@ -294,8 +294,8 @@
     "momentum_5d": NaN,
     "notes": "moderate avg move 9.3%; IV underpricing history",
     "status": "ACTIVE",
-    "pnl_pct": -12.8,
-    "pnl_note": "Premium $137.28 -> $119.73 (-12.8%, REAL)",
+    "pnl_pct": -11.4,
+    "pnl_note": "Premium $137.28 -> $121.68 (-11.4%, REAL)",
     "option_expiry": "2026-08-21",
     "option_strike": 510.0,
     "option_legs": [
@@ -303,7 +303,7 @@
       "PUT"
     ],
     "option_cost": 137.28,
-    "option_current_value": 119.73,
+    "option_current_value": 121.68,
     "option_entry_date": "2026-06-12",
     "option_entry_stock_price": 513.05
   }
