@@ -125,18 +125,6 @@
     "label": "Jobs Report (NFP)"
   },
   {
-    "date": "2026-07-09",
-    "type": "IPO",
-    "label": "CCCT IPO — Columbus Circle Capital Corp III",
-    "ticker": "CCCT"
-  },
-  {
-    "date": "2026-07-09",
-    "type": "IPO",
-    "label": "MRCO IPO — Mercator Acquisition Corp.",
-    "ticker": "MRCO"
-  },
-  {
     "date": "2026-07-10",
     "type": "IPO",
     "label": "SKHY IPO — SK hynix Inc.",
@@ -145,8 +133,8 @@
   {
     "date": "2026-07-10",
     "type": "IPO",
-    "label": "TARX IPO — Tarsier Pharma Ltd.",
-    "ticker": "TARX"
+    "label": "SKHYV IPO — SK hynix Inc.",
+    "ticker": "SKHYV"
   },
   {
     "date": "2026-07-14",
