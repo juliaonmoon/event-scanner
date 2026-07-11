@@ -125,18 +125,6 @@
     "label": "Jobs Report (NFP)"
   },
   {
-    "date": "2026-07-10",
-    "type": "IPO",
-    "label": "SKHY IPO — SK hynix Inc.",
-    "ticker": "SKHY"
-  },
-  {
-    "date": "2026-07-10",
-    "type": "IPO",
-    "label": "SKHYV IPO — SK hynix Inc.",
-    "ticker": "SKHYV"
-  },
-  {
     "date": "2026-07-14",
     "type": "CPI",
     "label": "CPI Release"
@@ -177,6 +165,12 @@
     "ticker": "MS"
   },
   {
+    "date": "2026-07-15",
+    "type": "IPO",
+    "label": "TARX IPO — Tarsier Pharma Ltd.",
+    "ticker": "TARX"
+  },
+  {
     "date": "2026-07-16",
     "type": "EARNINGS",
     "label": "GE Earnings",
@@ -187,6 +181,18 @@
     "type": "EARNINGS",
     "label": "NFLX Earnings",
     "ticker": "NFLX"
+  },
+  {
+    "date": "2026-07-16",
+    "type": "IPO",
+    "label": "CSQR IPO — Csquare, Inc.",
+    "ticker": "CSQR"
+  },
+  {
+    "date": "2026-07-16",
+    "type": "IPO",
+    "label": "STDN IPO — Standard Nuclear, Inc.",
+    "ticker": "STDN"
   },
   {
     "date": "2026-07-21",
