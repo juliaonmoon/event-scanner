@@ -167,6 +167,12 @@
   {
     "date": "2026-07-15",
     "type": "IPO",
+    "label": "EWAV IPO — East West Ave Acquisition Corp.",
+    "ticker": "EWAV"
+  },
+  {
+    "date": "2026-07-15",
+    "type": "IPO",
     "label": "TARX IPO — Tarsier Pharma Ltd.",
     "ticker": "TARX"
   },
