@@ -130,30 +130,6 @@
     "label": "CPI Release"
   },
   {
-    "date": "2026-07-14",
-    "type": "EARNINGS",
-    "label": "BAC Earnings",
-    "ticker": "BAC"
-  },
-  {
-    "date": "2026-07-14",
-    "type": "EARNINGS",
-    "label": "GS Earnings",
-    "ticker": "GS"
-  },
-  {
-    "date": "2026-07-14",
-    "type": "EARNINGS",
-    "label": "JPM Earnings",
-    "ticker": "JPM"
-  },
-  {
-    "date": "2026-07-14",
-    "type": "EARNINGS",
-    "label": "WFC Earnings",
-    "ticker": "WFC"
-  },
-  {
     "date": "2026-07-15",
     "type": "PPI",
     "label": "PPI Release"
@@ -169,12 +145,6 @@
     "type": "IPO",
     "label": "EWAV IPO — East West Ave Acquisition Corp.",
     "ticker": "EWAV"
-  },
-  {
-    "date": "2026-07-15",
-    "type": "IPO",
-    "label": "TARX IPO — Tarsier Pharma Ltd.",
-    "ticker": "TARX"
   },
   {
     "date": "2026-07-16",
@@ -447,6 +417,24 @@
     "date": "2026-10-02",
     "type": "JOBS",
     "label": "Jobs Report (NFP)"
+  },
+  {
+    "date": "2026-10-13",
+    "type": "EARNINGS",
+    "label": "GS Earnings",
+    "ticker": "GS"
+  },
+  {
+    "date": "2026-10-13",
+    "type": "EARNINGS",
+    "label": "JPM Earnings",
+    "ticker": "JPM"
+  },
+  {
+    "date": "2026-10-13",
+    "type": "EARNINGS",
+    "label": "WFC Earnings",
+    "ticker": "WFC"
   },
   {
     "date": "2026-10-14",
