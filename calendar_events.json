@@ -135,18 +135,6 @@
     "label": "PPI Release"
   },
   {
-    "date": "2026-07-15",
-    "type": "EARNINGS",
-    "label": "MS Earnings",
-    "ticker": "MS"
-  },
-  {
-    "date": "2026-07-15",
-    "type": "IPO",
-    "label": "EWAV IPO — East West Ave Acquisition Corp.",
-    "ticker": "EWAV"
-  },
-  {
     "date": "2026-07-16",
     "type": "EARNINGS",
     "label": "GE Earnings",
@@ -167,8 +155,26 @@
   {
     "date": "2026-07-16",
     "type": "IPO",
+    "label": "EWAV IPO — East West Ave Acquisition Corp.",
+    "ticker": "EWAV"
+  },
+  {
+    "date": "2026-07-16",
+    "type": "IPO",
+    "label": "QMLS IPO — QumulusAI, Inc.",
+    "ticker": "QMLS"
+  },
+  {
+    "date": "2026-07-16",
+    "type": "IPO",
     "label": "STDN IPO — Standard Nuclear, Inc.",
     "ticker": "STDN"
+  },
+  {
+    "date": "2026-07-17",
+    "type": "IPO",
+    "label": "NCO IPO — Southern Cross Acquisition I Corp.",
+    "ticker": "NCO"
   },
   {
     "date": "2026-07-21",
@@ -279,6 +285,12 @@
   {
     "date": "2026-08-04",
     "type": "EARNINGS",
+    "label": "ACAD Earnings",
+    "ticker": "ACAD"
+  },
+  {
+    "date": "2026-08-04",
+    "type": "EARNINGS",
     "label": "AMD Earnings",
     "ticker": "AMD"
   },
@@ -293,12 +305,6 @@
     "type": "EARNINGS",
     "label": "CAT Earnings",
     "ticker": "CAT"
-  },
-  {
-    "date": "2026-08-05",
-    "type": "EARNINGS",
-    "label": "ACAD Earnings",
-    "ticker": "ACAD"
   },
   {
     "date": "2026-08-05",
@@ -440,6 +446,18 @@
     "date": "2026-10-14",
     "type": "CPI",
     "label": "CPI Release"
+  },
+  {
+    "date": "2026-10-14",
+    "type": "EARNINGS",
+    "label": "BAC Earnings",
+    "ticker": "BAC"
+  },
+  {
+    "date": "2026-10-14",
+    "type": "EARNINGS",
+    "label": "MS Earnings",
+    "ticker": "MS"
   },
   {
     "date": "2026-10-15",
