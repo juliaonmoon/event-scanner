@@ -135,40 +135,10 @@
     "label": "PPI Release"
   },
   {
-    "date": "2026-07-16",
-    "type": "EARNINGS",
-    "label": "GE Earnings",
-    "ticker": "GE"
-  },
-  {
-    "date": "2026-07-16",
-    "type": "EARNINGS",
-    "label": "NFLX Earnings",
-    "ticker": "NFLX"
-  },
-  {
-    "date": "2026-07-16",
+    "date": "2026-07-17",
     "type": "IPO",
-    "label": "CSQR IPO — Csquare, Inc.",
-    "ticker": "CSQR"
-  },
-  {
-    "date": "2026-07-16",
-    "type": "IPO",
-    "label": "EWAV IPO — East West Ave Acquisition Corp.",
-    "ticker": "EWAV"
-  },
-  {
-    "date": "2026-07-16",
-    "type": "IPO",
-    "label": "QMLS IPO — QumulusAI, Inc.",
-    "ticker": "QMLS"
-  },
-  {
-    "date": "2026-07-16",
-    "type": "IPO",
-    "label": "STDN IPO — Standard Nuclear, Inc.",
-    "ticker": "STDN"
+    "label": "AMAC IPO — AMR Resources Acquisition Corp",
+    "ticker": "AMAC"
   },
   {
     "date": "2026-07-17",
