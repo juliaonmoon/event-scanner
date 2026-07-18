@@ -135,22 +135,16 @@
     "label": "PPI Release"
   },
   {
-    "date": "2026-07-17",
-    "type": "IPO",
-    "label": "AMAC IPO — AMR Resources Acquisition Corp",
-    "ticker": "AMAC"
-  },
-  {
-    "date": "2026-07-17",
-    "type": "IPO",
-    "label": "NCO IPO — Southern Cross Acquisition I Corp.",
-    "ticker": "NCO"
-  },
-  {
     "date": "2026-07-21",
     "type": "EARNINGS",
     "label": "NOC Earnings",
     "ticker": "NOC"
+  },
+  {
+    "date": "2026-07-21",
+    "type": "IPO",
+    "label": "NCO IPO — Southern Cross Acquisition I Corp.",
+    "ticker": "NCO"
   },
   {
     "date": "2026-07-22",
