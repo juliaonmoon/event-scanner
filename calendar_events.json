@@ -136,12 +136,6 @@
   },
   {
     "date": "2026-07-21",
-    "type": "EARNINGS",
-    "label": "NOC Earnings",
-    "ticker": "NOC"
-  },
-  {
-    "date": "2026-07-21",
     "type": "IPO",
     "label": "NCO IPO — Southern Cross Acquisition I Corp.",
     "ticker": "NCO"
@@ -175,12 +169,6 @@
     "type": "EARNINGS",
     "label": "BA Earnings",
     "ticker": "BA"
-  },
-  {
-    "date": "2026-07-28",
-    "type": "EARNINGS",
-    "label": "V Earnings",
-    "ticker": "V"
   },
   {
     "date": "2026-07-29",
@@ -223,12 +211,6 @@
     "ticker": "AMZN"
   },
   {
-    "date": "2026-07-30",
-    "type": "EARNINGS",
-    "label": "MA Earnings",
-    "ticker": "MA"
-  },
-  {
     "date": "2026-07-31",
     "type": "EARNINGS",
     "label": "CVX Earnings",
@@ -241,12 +223,6 @@
     "ticker": "MRNA"
   },
   {
-    "date": "2026-07-31",
-    "type": "EARNINGS",
-    "label": "XOM Earnings",
-    "ticker": "XOM"
-  },
-  {
     "date": "2026-08-04",
     "type": "EARNINGS",
     "label": "ACAD Earnings",
@@ -255,26 +231,8 @@
   {
     "date": "2026-08-04",
     "type": "EARNINGS",
-    "label": "AMD Earnings",
-    "ticker": "AMD"
-  },
-  {
-    "date": "2026-08-04",
-    "type": "EARNINGS",
     "label": "BNTX Earnings",
     "ticker": "BNTX"
-  },
-  {
-    "date": "2026-08-04",
-    "type": "EARNINGS",
-    "label": "CAT Earnings",
-    "ticker": "CAT"
-  },
-  {
-    "date": "2026-08-05",
-    "type": "EARNINGS",
-    "label": "DIS Earnings",
-    "ticker": "DIS"
   },
   {
     "date": "2026-08-05",
@@ -322,12 +280,6 @@
     "label": "PPI Release"
   },
   {
-    "date": "2026-08-18",
-    "type": "EARNINGS",
-    "label": "HD Earnings",
-    "ticker": "HD"
-  },
-  {
     "date": "2026-08-20",
     "type": "EARNINGS",
     "label": "WMT Earnings",
@@ -338,12 +290,6 @@
     "type": "EARNINGS",
     "label": "NVDA Earnings",
     "ticker": "NVDA"
-  },
-  {
-    "date": "2026-09-02",
-    "type": "EARNINGS",
-    "label": "CRM Earnings",
-    "ticker": "CRM"
   },
   {
     "date": "2026-09-03",
@@ -391,18 +337,6 @@
   {
     "date": "2026-10-13",
     "type": "EARNINGS",
-    "label": "GS Earnings",
-    "ticker": "GS"
-  },
-  {
-    "date": "2026-10-13",
-    "type": "EARNINGS",
-    "label": "JPM Earnings",
-    "ticker": "JPM"
-  },
-  {
-    "date": "2026-10-13",
-    "type": "EARNINGS",
     "label": "WFC Earnings",
     "ticker": "WFC"
   },
@@ -410,12 +344,6 @@
     "date": "2026-10-14",
     "type": "CPI",
     "label": "CPI Release"
-  },
-  {
-    "date": "2026-10-14",
-    "type": "EARNINGS",
-    "label": "BAC Earnings",
-    "ticker": "BAC"
   },
   {
     "date": "2026-10-14",
