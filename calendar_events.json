@@ -137,6 +137,12 @@
   {
     "date": "2026-07-21",
     "type": "IPO",
+    "label": "BRTM IPO — B&amp;R Technology Merger Corp.",
+    "ticker": "BRTM"
+  },
+  {
+    "date": "2026-07-21",
+    "type": "IPO",
     "label": "NCO IPO — Southern Cross Acquisition I Corp.",
     "ticker": "NCO"
   },
@@ -163,6 +169,12 @@
     "type": "EARNINGS",
     "label": "RTX Earnings",
     "ticker": "RTX"
+  },
+  {
+    "date": "2026-07-24",
+    "type": "IPO",
+    "label": "SCTX IPO — Scribe Therapeutics Inc.",
+    "ticker": "SCTX"
   },
   {
     "date": "2026-07-28",
