@@ -135,18 +135,6 @@
     "label": "PPI Release"
   },
   {
-    "date": "2026-07-21",
-    "type": "IPO",
-    "label": "BRTM IPO — B&amp;R Technology Merger Corp.",
-    "ticker": "BRTM"
-  },
-  {
-    "date": "2026-07-21",
-    "type": "IPO",
-    "label": "NCO IPO — Southern Cross Acquisition I Corp.",
-    "ticker": "NCO"
-  },
-  {
     "date": "2026-07-22",
     "type": "EARNINGS",
     "label": "GOOGL Earnings",
@@ -367,6 +355,24 @@
     "date": "2026-10-15",
     "type": "PPI",
     "label": "PPI Release"
+  },
+  {
+    "date": "2026-10-20",
+    "type": "EARNINGS",
+    "label": "GE Earnings",
+    "ticker": "GE"
+  },
+  {
+    "date": "2026-10-20",
+    "type": "EARNINGS",
+    "label": "NFLX Earnings",
+    "ticker": "NFLX"
+  },
+  {
+    "date": "2026-10-20",
+    "type": "EARNINGS",
+    "label": "NOC Earnings",
+    "ticker": "NOC"
   },
   {
     "date": "2026-10-28",
