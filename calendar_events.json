@@ -135,18 +135,6 @@
     "label": "PPI Release"
   },
   {
-    "date": "2026-07-22",
-    "type": "EARNINGS",
-    "label": "GOOGL Earnings",
-    "ticker": "GOOGL"
-  },
-  {
-    "date": "2026-07-22",
-    "type": "EARNINGS",
-    "label": "TSLA Earnings",
-    "ticker": "TSLA"
-  },
-  {
     "date": "2026-07-23",
     "type": "EARNINGS",
     "label": "LMT Earnings",
@@ -253,12 +241,6 @@
     "ticker": "LUNR"
   },
   {
-    "date": "2026-08-06",
-    "type": "EARNINGS",
-    "label": "RKLB Earnings",
-    "ticker": "RKLB"
-  },
-  {
     "date": "2026-08-07",
     "type": "JOBS",
     "label": "Jobs Report (NFP)"
@@ -268,6 +250,12 @@
     "type": "EARNINGS",
     "label": "ASTS Earnings",
     "ticker": "ASTS"
+  },
+  {
+    "date": "2026-08-10",
+    "type": "EARNINGS",
+    "label": "RKLB Earnings",
+    "ticker": "RKLB"
   },
   {
     "date": "2026-08-12",
@@ -373,6 +361,12 @@
     "type": "EARNINGS",
     "label": "NOC Earnings",
     "ticker": "NOC"
+  },
+  {
+    "date": "2026-10-21",
+    "type": "EARNINGS",
+    "label": "TSLA Earnings",
+    "ticker": "TSLA"
   },
   {
     "date": "2026-10-28",
