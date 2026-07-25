@@ -135,24 +135,6 @@
     "label": "PPI Release"
   },
   {
-    "date": "2026-07-24",
-    "type": "IPO",
-    "label": "MTAK IPO — Market Technology Acquisition Corp",
-    "ticker": "MTAK"
-  },
-  {
-    "date": "2026-07-24",
-    "type": "IPO",
-    "label": "PLCI IPO — Pelican Acquisition II Corporation",
-    "ticker": "PLCI"
-  },
-  {
-    "date": "2026-07-24",
-    "type": "IPO",
-    "label": "SCTX IPO — Scribe Therapeutics Inc.",
-    "ticker": "SCTX"
-  },
-  {
     "date": "2026-07-28",
     "type": "EARNINGS",
     "label": "BA Earnings",
@@ -163,6 +145,12 @@
     "type": "EARNINGS",
     "label": "V Earnings",
     "ticker": "V"
+  },
+  {
+    "date": "2026-07-28",
+    "type": "IPO",
+    "label": "IOND IPO — Ionic Digital Inc.",
+    "ticker": "IOND"
   },
   {
     "date": "2026-07-29",
@@ -209,6 +197,18 @@
     "type": "EARNINGS",
     "label": "MA Earnings",
     "ticker": "MA"
+  },
+  {
+    "date": "2026-07-30",
+    "type": "IPO",
+    "label": "JMKE IPO — Jersey Mikeâs Subs Inc.",
+    "ticker": "JMKE"
+  },
+  {
+    "date": "2026-07-30",
+    "type": "IPO",
+    "label": "REF IPO — Reformation Inc.",
+    "ticker": "REF"
   },
   {
     "date": "2026-07-31",
