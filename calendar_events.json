@@ -135,30 +135,6 @@
     "label": "PPI Release"
   },
   {
-    "date": "2026-07-28",
-    "type": "EARNINGS",
-    "label": "BA Earnings",
-    "ticker": "BA"
-  },
-  {
-    "date": "2026-07-28",
-    "type": "EARNINGS",
-    "label": "V Earnings",
-    "ticker": "V"
-  },
-  {
-    "date": "2026-07-28",
-    "type": "IPO",
-    "label": "CATL IPO — Category Leader Partner Corporation 1",
-    "ticker": "CATL"
-  },
-  {
-    "date": "2026-07-28",
-    "type": "IPO",
-    "label": "IOND IPO — Ionic Digital Inc.",
-    "ticker": "IOND"
-  },
-  {
     "date": "2026-07-29",
     "type": "FOMC",
     "label": "FOMC Rate Decision"
@@ -182,6 +158,12 @@
     "ticker": "SBUX"
   },
   {
+    "date": "2026-07-29",
+    "type": "IPO",
+    "label": "IMC IPO — IMC Rare Earths Ltd.",
+    "ticker": "IMC"
+  },
+  {
     "date": "2026-07-30",
     "type": "GDP",
     "label": "GDP Advance Estimate (2Q'26)"
@@ -203,6 +185,12 @@
     "type": "EARNINGS",
     "label": "MA Earnings",
     "ticker": "MA"
+  },
+  {
+    "date": "2026-07-30",
+    "type": "IPO",
+    "label": "EWAV IPO — East West Ave Acquisition Corp.",
+    "ticker": "EWAV"
   },
   {
     "date": "2026-07-30",
@@ -239,6 +227,12 @@
     "type": "IPO",
     "label": "APMD IPO — Apnimed, Inc.",
     "ticker": "APMD"
+  },
+  {
+    "date": "2026-07-31",
+    "type": "IPO",
+    "label": "TP IPO — Ticketplus Ltd.",
+    "ticker": "TP"
   },
   {
     "date": "2026-08-04",
@@ -283,12 +277,6 @@
     "ticker": "SPCE"
   },
   {
-    "date": "2026-08-06",
-    "type": "EARNINGS",
-    "label": "LUNR Earnings",
-    "ticker": "LUNR"
-  },
-  {
     "date": "2026-08-07",
     "type": "JOBS",
     "label": "Jobs Report (NFP)"
@@ -314,6 +302,12 @@
     "date": "2026-08-13",
     "type": "PPI",
     "label": "PPI Release"
+  },
+  {
+    "date": "2026-08-13",
+    "type": "EARNINGS",
+    "label": "LUNR Earnings",
+    "ticker": "LUNR"
   },
   {
     "date": "2026-08-18",
@@ -457,6 +451,12 @@
     "type": "EARNINGS",
     "label": "TSLA Earnings",
     "ticker": "TSLA"
+  },
+  {
+    "date": "2026-10-27",
+    "type": "EARNINGS",
+    "label": "V Earnings",
+    "ticker": "V"
   },
   {
     "date": "2026-10-28",
