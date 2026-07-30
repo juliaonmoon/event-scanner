@@ -140,30 +140,6 @@
     "label": "FOMC Rate Decision"
   },
   {
-    "date": "2026-07-29",
-    "type": "EARNINGS",
-    "label": "META Earnings",
-    "ticker": "META"
-  },
-  {
-    "date": "2026-07-29",
-    "type": "EARNINGS",
-    "label": "MSFT Earnings",
-    "ticker": "MSFT"
-  },
-  {
-    "date": "2026-07-29",
-    "type": "EARNINGS",
-    "label": "SBUX Earnings",
-    "ticker": "SBUX"
-  },
-  {
-    "date": "2026-07-29",
-    "type": "IPO",
-    "label": "IMC IPO — IMC Rare Earths Ltd.",
-    "ticker": "IMC"
-  },
-  {
     "date": "2026-07-30",
     "type": "GDP",
     "label": "GDP Advance Estimate (2Q'26)"
@@ -191,6 +167,12 @@
     "type": "IPO",
     "label": "EWAV IPO — East West Ave Acquisition Corp.",
     "ticker": "EWAV"
+  },
+  {
+    "date": "2026-07-30",
+    "type": "IPO",
+    "label": "GYGY IPO — Game Your Game, Inc.",
+    "ticker": "GYGY"
   },
   {
     "date": "2026-07-30",
@@ -229,12 +211,6 @@
     "ticker": "APMD"
   },
   {
-    "date": "2026-07-31",
-    "type": "IPO",
-    "label": "TP IPO — Ticketplus Ltd.",
-    "ticker": "TP"
-  },
-  {
     "date": "2026-08-04",
     "type": "EARNINGS",
     "label": "ACAD Earnings",
@@ -271,12 +247,6 @@
     "ticker": "RXRX"
   },
   {
-    "date": "2026-08-05",
-    "type": "EARNINGS",
-    "label": "SPCE Earnings",
-    "ticker": "SPCE"
-  },
-  {
     "date": "2026-08-07",
     "type": "JOBS",
     "label": "Jobs Report (NFP)"
@@ -297,6 +267,12 @@
     "date": "2026-08-12",
     "type": "CPI",
     "label": "CPI Release"
+  },
+  {
+    "date": "2026-08-12",
+    "type": "EARNINGS",
+    "label": "SPCE Earnings",
+    "ticker": "SPCE"
   },
   {
     "date": "2026-08-13",
@@ -462,6 +438,36 @@
     "date": "2026-10-28",
     "type": "FOMC",
     "label": "FOMC Rate Decision"
+  },
+  {
+    "date": "2026-10-28",
+    "type": "EARNINGS",
+    "label": "BA Earnings",
+    "ticker": "BA"
+  },
+  {
+    "date": "2026-10-28",
+    "type": "EARNINGS",
+    "label": "GOOGL Earnings",
+    "ticker": "GOOGL"
+  },
+  {
+    "date": "2026-10-28",
+    "type": "EARNINGS",
+    "label": "META Earnings",
+    "ticker": "META"
+  },
+  {
+    "date": "2026-10-28",
+    "type": "EARNINGS",
+    "label": "MSFT Earnings",
+    "ticker": "MSFT"
+  },
+  {
+    "date": "2026-10-28",
+    "type": "EARNINGS",
+    "label": "SBUX Earnings",
+    "ticker": "SBUX"
   },
   {
     "date": "2026-10-29",
