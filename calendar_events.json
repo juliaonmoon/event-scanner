@@ -145,48 +145,6 @@
     "label": "GDP Advance Estimate (2Q'26)"
   },
   {
-    "date": "2026-07-30",
-    "type": "EARNINGS",
-    "label": "AAPL Earnings",
-    "ticker": "AAPL"
-  },
-  {
-    "date": "2026-07-30",
-    "type": "EARNINGS",
-    "label": "AMZN Earnings",
-    "ticker": "AMZN"
-  },
-  {
-    "date": "2026-07-30",
-    "type": "EARNINGS",
-    "label": "MA Earnings",
-    "ticker": "MA"
-  },
-  {
-    "date": "2026-07-30",
-    "type": "IPO",
-    "label": "EWAV IPO — East West Ave Acquisition Corp.",
-    "ticker": "EWAV"
-  },
-  {
-    "date": "2026-07-30",
-    "type": "IPO",
-    "label": "GYGY IPO — Game Your Game, Inc.",
-    "ticker": "GYGY"
-  },
-  {
-    "date": "2026-07-30",
-    "type": "IPO",
-    "label": "JMKE IPO — Jersey Mikeâs Subs Inc.",
-    "ticker": "JMKE"
-  },
-  {
-    "date": "2026-07-30",
-    "type": "IPO",
-    "label": "REF IPO — Reformation Inc.",
-    "ticker": "REF"
-  },
-  {
     "date": "2026-07-31",
     "type": "EARNINGS",
     "label": "CVX Earnings",
@@ -209,6 +167,24 @@
     "type": "IPO",
     "label": "APMD IPO — Apnimed, Inc.",
     "ticker": "APMD"
+  },
+  {
+    "date": "2026-07-31",
+    "type": "IPO",
+    "label": "EWAV IPO — East West Ave Acquisition Corp.",
+    "ticker": "EWAV"
+  },
+  {
+    "date": "2026-07-31",
+    "type": "IPO",
+    "label": "THEO IPO — BOA Acquisition Corp. II",
+    "ticker": "THEO"
+  },
+  {
+    "date": "2026-07-31",
+    "type": "IPO",
+    "label": "XIII IPO — Churchill Capital Corp XIII",
+    "ticker": "XIII"
   },
   {
     "date": "2026-08-04",
@@ -473,6 +449,24 @@
     "date": "2026-10-29",
     "type": "GDP",
     "label": "GDP Advance Estimate (3Q'26)"
+  },
+  {
+    "date": "2026-10-29",
+    "type": "EARNINGS",
+    "label": "AAPL Earnings",
+    "ticker": "AAPL"
+  },
+  {
+    "date": "2026-10-29",
+    "type": "EARNINGS",
+    "label": "AMZN Earnings",
+    "ticker": "AMZN"
+  },
+  {
+    "date": "2026-10-29",
+    "type": "EARNINGS",
+    "label": "MA Earnings",
+    "ticker": "MA"
   },
   {
     "date": "2026-11-06",
