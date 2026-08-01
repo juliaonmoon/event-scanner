@@ -145,48 +145,6 @@
     "label": "GDP Advance Estimate (2Q'26)"
   },
   {
-    "date": "2026-07-31",
-    "type": "EARNINGS",
-    "label": "CVX Earnings",
-    "ticker": "CVX"
-  },
-  {
-    "date": "2026-07-31",
-    "type": "EARNINGS",
-    "label": "MRNA Earnings",
-    "ticker": "MRNA"
-  },
-  {
-    "date": "2026-07-31",
-    "type": "EARNINGS",
-    "label": "XOM Earnings",
-    "ticker": "XOM"
-  },
-  {
-    "date": "2026-07-31",
-    "type": "IPO",
-    "label": "APMD IPO — Apnimed, Inc.",
-    "ticker": "APMD"
-  },
-  {
-    "date": "2026-07-31",
-    "type": "IPO",
-    "label": "EWAV IPO — East West Ave Acquisition Corp.",
-    "ticker": "EWAV"
-  },
-  {
-    "date": "2026-07-31",
-    "type": "IPO",
-    "label": "THEO IPO — BOA Acquisition Corp. II",
-    "ticker": "THEO"
-  },
-  {
-    "date": "2026-07-31",
-    "type": "IPO",
-    "label": "XIII IPO — Churchill Capital Corp XIII",
-    "ticker": "XIII"
-  },
-  {
     "date": "2026-08-04",
     "type": "EARNINGS",
     "label": "ACAD Earnings",
@@ -221,6 +179,30 @@
     "type": "EARNINGS",
     "label": "RXRX Earnings",
     "ticker": "RXRX"
+  },
+  {
+    "date": "2026-08-05",
+    "type": "IPO",
+    "label": "ATTO IPO — Attovia Therapeutics, Inc.",
+    "ticker": "ATTO"
+  },
+  {
+    "date": "2026-08-06",
+    "type": "IPO",
+    "label": "BRVE IPO — Braveheart Bio, Inc.",
+    "ticker": "BRVE"
+  },
+  {
+    "date": "2026-08-06",
+    "type": "IPO",
+    "label": "OCLT IPO — OceanLight Acquisition Corporation",
+    "ticker": "OCLT"
+  },
+  {
+    "date": "2026-08-06",
+    "type": "IPO",
+    "label": "VOGX IPO — Vogenx, Inc.",
+    "ticker": "VOGX"
   },
   {
     "date": "2026-08-07",
@@ -467,6 +449,18 @@
     "type": "EARNINGS",
     "label": "MA Earnings",
     "ticker": "MA"
+  },
+  {
+    "date": "2026-10-30",
+    "type": "EARNINGS",
+    "label": "CVX Earnings",
+    "ticker": "CVX"
+  },
+  {
+    "date": "2026-10-30",
+    "type": "EARNINGS",
+    "label": "XOM Earnings",
+    "ticker": "XOM"
   },
   {
     "date": "2026-11-06",
