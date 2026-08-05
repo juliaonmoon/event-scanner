@@ -145,42 +145,6 @@
     "label": "GDP Advance Estimate (2Q'26)"
   },
   {
-    "date": "2026-08-04",
-    "type": "EARNINGS",
-    "label": "ACAD Earnings",
-    "ticker": "ACAD"
-  },
-  {
-    "date": "2026-08-04",
-    "type": "EARNINGS",
-    "label": "AMD Earnings",
-    "ticker": "AMD"
-  },
-  {
-    "date": "2026-08-04",
-    "type": "EARNINGS",
-    "label": "BNTX Earnings",
-    "ticker": "BNTX"
-  },
-  {
-    "date": "2026-08-04",
-    "type": "EARNINGS",
-    "label": "CAT Earnings",
-    "ticker": "CAT"
-  },
-  {
-    "date": "2026-08-04",
-    "type": "IPO",
-    "label": "FJDI IPO — ARC Group Securities Acquisition I",
-    "ticker": "FJDI"
-  },
-  {
-    "date": "2026-08-04",
-    "type": "IPO",
-    "label": "THEO IPO — BOA Acquisition Corp. II",
-    "ticker": "THEO"
-  },
-  {
     "date": "2026-08-05",
     "type": "EARNINGS",
     "label": "DIS Earnings",
@@ -197,6 +161,12 @@
     "type": "IPO",
     "label": "ATTO IPO — Attovia Therapeutics, Inc.",
     "ticker": "ATTO"
+  },
+  {
+    "date": "2026-08-05",
+    "type": "IPO",
+    "label": "TCGX IPO — TCGX Acquisition Corp.",
+    "ticker": "TCGX"
   },
   {
     "date": "2026-08-06",
@@ -471,6 +441,12 @@
   {
     "date": "2026-10-29",
     "type": "EARNINGS",
+    "label": "CAT Earnings",
+    "ticker": "CAT"
+  },
+  {
+    "date": "2026-10-29",
+    "type": "EARNINGS",
     "label": "MA Earnings",
     "ticker": "MA"
   },
@@ -485,6 +461,18 @@
     "type": "EARNINGS",
     "label": "XOM Earnings",
     "ticker": "XOM"
+  },
+  {
+    "date": "2026-11-03",
+    "type": "EARNINGS",
+    "label": "AMD Earnings",
+    "ticker": "AMD"
+  },
+  {
+    "date": "2026-11-03",
+    "type": "EARNINGS",
+    "label": "BNTX Earnings",
+    "ticker": "BNTX"
   },
   {
     "date": "2026-11-06",
