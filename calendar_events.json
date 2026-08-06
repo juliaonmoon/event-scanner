@@ -145,30 +145,6 @@
     "label": "GDP Advance Estimate (2Q'26)"
   },
   {
-    "date": "2026-08-05",
-    "type": "EARNINGS",
-    "label": "DIS Earnings",
-    "ticker": "DIS"
-  },
-  {
-    "date": "2026-08-05",
-    "type": "EARNINGS",
-    "label": "RXRX Earnings",
-    "ticker": "RXRX"
-  },
-  {
-    "date": "2026-08-05",
-    "type": "IPO",
-    "label": "ATTO IPO — Attovia Therapeutics, Inc.",
-    "ticker": "ATTO"
-  },
-  {
-    "date": "2026-08-05",
-    "type": "IPO",
-    "label": "TCGX IPO — TCGX Acquisition Corp.",
-    "ticker": "TCGX"
-  },
-  {
     "date": "2026-08-06",
     "type": "IPO",
     "label": "BRVE IPO — Braveheart Bio, Inc.",
@@ -183,8 +159,8 @@
   {
     "date": "2026-08-06",
     "type": "IPO",
-    "label": "VOGX IPO — Vogenx, Inc.",
-    "ticker": "VOGX"
+    "label": "PHAX IPO — Phalanx Acquisition Corp I",
+    "ticker": "PHAX"
   },
   {
     "date": "2026-08-07",
@@ -202,6 +178,12 @@
     "type": "IPO",
     "label": "LTGO IPO — Latigo Biotherapeutics, Inc.",
     "ticker": "LTGO"
+  },
+  {
+    "date": "2026-08-07",
+    "type": "IPO",
+    "label": "VOGX IPO — Vogenx, Inc.",
+    "ticker": "VOGX"
   },
   {
     "date": "2026-08-10",
@@ -252,6 +234,12 @@
   {
     "date": "2026-08-26",
     "type": "EARNINGS",
+    "label": "CRM Earnings",
+    "ticker": "CRM"
+  },
+  {
+    "date": "2026-08-26",
+    "type": "EARNINGS",
     "label": "NVDA Earnings",
     "ticker": "NVDA"
   },
@@ -260,12 +248,6 @@
     "type": "EARNINGS",
     "label": "AVGO Earnings",
     "ticker": "AVGO"
-  },
-  {
-    "date": "2026-09-02",
-    "type": "EARNINGS",
-    "label": "CRM Earnings",
-    "ticker": "CRM"
   },
   {
     "date": "2026-09-04",
@@ -473,6 +455,18 @@
     "type": "EARNINGS",
     "label": "BNTX Earnings",
     "ticker": "BNTX"
+  },
+  {
+    "date": "2026-11-04",
+    "type": "EARNINGS",
+    "label": "ACAD Earnings",
+    "ticker": "ACAD"
+  },
+  {
+    "date": "2026-11-04",
+    "type": "EARNINGS",
+    "label": "RXRX Earnings",
+    "ticker": "RXRX"
   },
   {
     "date": "2026-11-06",
