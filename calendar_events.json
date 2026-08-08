@@ -150,18 +150,6 @@
     "label": "Jobs Report (NFP)"
   },
   {
-    "date": "2026-08-07",
-    "type": "IPO",
-    "label": "BLSM IPO — BlossomHill Therapeutics, Inc.",
-    "ticker": "BLSM"
-  },
-  {
-    "date": "2026-08-07",
-    "type": "IPO",
-    "label": "LTGO IPO — Latigo Biotherapeutics, Inc.",
-    "ticker": "LTGO"
-  },
-  {
     "date": "2026-08-10",
     "type": "EARNINGS",
     "label": "ASTS Earnings",
@@ -183,6 +171,12 @@
     "type": "EARNINGS",
     "label": "SPCE Earnings",
     "ticker": "SPCE"
+  },
+  {
+    "date": "2026-08-12",
+    "type": "IPO",
+    "label": "FOIL IPO — Londian Wason New Energy Tech Inc.",
+    "ticker": "FOIL"
   },
   {
     "date": "2026-08-13",
