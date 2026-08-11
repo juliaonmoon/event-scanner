@@ -150,16 +150,10 @@
     "label": "Jobs Report (NFP)"
   },
   {
-    "date": "2026-08-10",
-    "type": "EARNINGS",
-    "label": "ASTS Earnings",
-    "ticker": "ASTS"
-  },
-  {
-    "date": "2026-08-10",
-    "type": "EARNINGS",
-    "label": "RKLB Earnings",
-    "ticker": "RKLB"
+    "date": "2026-08-11",
+    "type": "IPO",
+    "label": "LEDR IPO — Leaderâs Advantage Acquisition Corp.",
+    "ticker": "LEDR"
   },
   {
     "date": "2026-08-12",
@@ -177,6 +171,12 @@
     "type": "IPO",
     "label": "FOIL IPO — Londian Wason New Energy Tech Inc.",
     "ticker": "FOIL"
+  },
+  {
+    "date": "2026-08-12",
+    "type": "IPO",
+    "label": "SCAT IPO — Southern Cross Acquisition II Corp.",
+    "ticker": "SCAT"
   },
   {
     "date": "2026-08-13",
@@ -225,15 +225,15 @@
     "label": "Jobs Report (NFP)"
   },
   {
-    "date": "2026-09-09",
-    "type": "EARNINGS",
-    "label": "ORCL Earnings",
-    "ticker": "ORCL"
-  },
-  {
     "date": "2026-09-10",
     "type": "PPI",
     "label": "PPI Release"
+  },
+  {
+    "date": "2026-09-10",
+    "type": "EARNINGS",
+    "label": "ORCL Earnings",
+    "ticker": "ORCL"
   },
   {
     "date": "2026-09-11",
@@ -442,6 +442,18 @@
     "date": "2026-11-06",
     "type": "JOBS",
     "label": "Jobs Report (NFP)"
+  },
+  {
+    "date": "2026-11-09",
+    "type": "EARNINGS",
+    "label": "ASTS Earnings",
+    "ticker": "ASTS"
+  },
+  {
+    "date": "2026-11-09",
+    "type": "EARNINGS",
+    "label": "RKLB Earnings",
+    "ticker": "RKLB"
   },
   {
     "date": "2026-11-10",

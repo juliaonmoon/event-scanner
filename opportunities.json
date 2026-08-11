@@ -293,7 +293,7 @@
     "avg_direction": -0.2,
     "momentum_5d": NaN,
     "notes": "moderate avg move 9.3%; IV underpricing history",
-    "status": "EXITED",
+    "status": "ARCHIVED",
     "pnl_pct": -39.1,
     "pnl_note": "Premium $137.28 -> $83.65 (-39.1%, REAL)",
     "option_expiry": "2026-08-21",
@@ -441,7 +441,7 @@
     "avg_direction": null,
     "momentum_5d": -0.6,
     "notes": "no clear bias",
-    "status": "EXITED",
+    "status": "ARCHIVED",
     "pnl_pct": null,
     "pnl_note": "day trade - P&L depends on intraday execution"
   },
@@ -464,7 +464,7 @@
     "avg_direction": null,
     "momentum_5d": 1.9,
     "notes": "no clear bias",
-    "status": "EXITED",
+    "status": "ARCHIVED",
     "pnl_pct": null,
     "pnl_note": "day trade - P&L depends on intraday execution"
   },
@@ -536,5 +536,28 @@
     "status": "EXITED",
     "pnl_pct": null,
     "pnl_note": "day trade - P&L depends on intraday execution"
+  },
+  {
+    "id": "SPCE_EARNINGS_2026-08-12",
+    "ticker": "SPCE",
+    "event_type": "EARNINGS",
+    "event_date": "2026-08-12",
+    "exit_date": "2026-08-11",
+    "added_date": "2026-08-11",
+    "score": -5,
+    "play": "DAY",
+    "strategy": "DAY TRADE",
+    "instruments": "Shares or 1-week calls at open, sell same day",
+    "entry_stock_price": 3.23,
+    "current_stock_price": 3.23,
+    "exp_move_pct": 14.9,
+    "avg_move_pct": null,
+    "win_rate": 50,
+    "avg_direction": null,
+    "momentum_5d": 9.5,
+    "notes": "no clear bias",
+    "status": "ACTIVE",
+    "pnl_pct": null,
+    "pnl_note": null
   }
 ]
