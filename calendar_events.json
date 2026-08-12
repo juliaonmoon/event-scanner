@@ -150,12 +150,6 @@
     "label": "Jobs Report (NFP)"
   },
   {
-    "date": "2026-08-11",
-    "type": "IPO",
-    "label": "LEDR IPO — Leaderâs Advantage Acquisition Corp.",
-    "ticker": "LEDR"
-  },
-  {
     "date": "2026-08-12",
     "type": "CPI",
     "label": "CPI Release"
@@ -177,6 +171,18 @@
     "type": "IPO",
     "label": "SCAT IPO — Southern Cross Acquisition II Corp.",
     "ticker": "SCAT"
+  },
+  {
+    "date": "2026-08-12",
+    "type": "IPO",
+    "label": "SLXN IPO — Silexion Therapeutics Corp",
+    "ticker": "SLXN"
+  },
+  {
+    "date": "2026-08-12",
+    "type": "IPO",
+    "label": "VOGX IPO — Vogenx, Inc.",
+    "ticker": "VOGX"
   },
   {
     "date": "2026-08-13",
