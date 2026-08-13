@@ -155,36 +155,6 @@
     "label": "CPI Release"
   },
   {
-    "date": "2026-08-12",
-    "type": "EARNINGS",
-    "label": "SPCE Earnings",
-    "ticker": "SPCE"
-  },
-  {
-    "date": "2026-08-12",
-    "type": "IPO",
-    "label": "FOIL IPO — Londian Wason New Energy Tech Inc.",
-    "ticker": "FOIL"
-  },
-  {
-    "date": "2026-08-12",
-    "type": "IPO",
-    "label": "SCAT IPO — Southern Cross Acquisition II Corp.",
-    "ticker": "SCAT"
-  },
-  {
-    "date": "2026-08-12",
-    "type": "IPO",
-    "label": "SLXN IPO — Silexion Therapeutics Corp",
-    "ticker": "SLXN"
-  },
-  {
-    "date": "2026-08-12",
-    "type": "IPO",
-    "label": "VOGX IPO — Vogenx, Inc.",
-    "ticker": "VOGX"
-  },
-  {
     "date": "2026-08-13",
     "type": "PPI",
     "label": "PPI Release"
@@ -194,6 +164,18 @@
     "type": "EARNINGS",
     "label": "LUNR Earnings",
     "ticker": "LUNR"
+  },
+  {
+    "date": "2026-08-14",
+    "type": "IPO",
+    "label": "MOT IPO — MetaOptics Ltd",
+    "ticker": "MOT"
+  },
+  {
+    "date": "2026-08-14",
+    "type": "IPO",
+    "label": "NSAI IPO — NorthStrive Acquisition Corp I.",
+    "ticker": "NSAI"
   },
   {
     "date": "2026-08-18",
