@@ -160,16 +160,16 @@
     "label": "PPI Release"
   },
   {
-    "date": "2026-08-14",
-    "type": "IPO",
-    "label": "NSAI IPO — NorthStrive Acquisition Corp I.",
-    "ticker": "NSAI"
-  },
-  {
     "date": "2026-08-18",
     "type": "EARNINGS",
     "label": "HD Earnings",
     "ticker": "HD"
+  },
+  {
+    "date": "2026-08-19",
+    "type": "IPO",
+    "label": "LYNX IPO — Lyntris Inc.",
+    "ticker": "LYNX"
   },
   {
     "date": "2026-08-20",
