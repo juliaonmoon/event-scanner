@@ -166,6 +166,24 @@
     "ticker": "HD"
   },
   {
+    "date": "2026-08-18",
+    "type": "IPO",
+    "label": "ADBT IPO — Advasa Holdings, Inc.",
+    "ticker": "ADBT"
+  },
+  {
+    "date": "2026-08-18",
+    "type": "IPO",
+    "label": "NSAI IPO — NorthStrive Acquisition Corp I.",
+    "ticker": "NSAI"
+  },
+  {
+    "date": "2026-08-18",
+    "type": "IPO",
+    "label": "XTER IPO — Karman Line Acquisition Corp.",
+    "ticker": "XTER"
+  },
+  {
     "date": "2026-08-19",
     "type": "IPO",
     "label": "LYNX IPO — Lyntris Inc.",
@@ -458,6 +476,12 @@
     "date": "2026-11-13",
     "type": "PPI",
     "label": "PPI Release"
+  },
+  {
+    "date": "2026-11-16",
+    "type": "EARNINGS",
+    "label": "SPCE Earnings",
+    "ticker": "SPCE"
   },
   {
     "date": "2026-12-04",
