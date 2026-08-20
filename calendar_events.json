@@ -160,16 +160,16 @@
     "label": "PPI Release"
   },
   {
-    "date": "2026-08-19",
-    "type": "IPO",
-    "label": "LYNX IPO — Lyntris Inc.",
-    "ticker": "LYNX"
-  },
-  {
     "date": "2026-08-20",
     "type": "EARNINGS",
     "label": "WMT Earnings",
     "ticker": "WMT"
+  },
+  {
+    "date": "2026-08-24",
+    "type": "IPO",
+    "label": "MOT IPO — MetaOptics Ltd",
+    "ticker": "MOT"
   },
   {
     "date": "2026-08-26",
