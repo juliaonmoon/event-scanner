@@ -161,15 +161,9 @@
   },
   {
     "date": "2026-08-20",
-    "type": "EARNINGS",
-    "label": "WMT Earnings",
-    "ticker": "WMT"
-  },
-  {
-    "date": "2026-08-24",
     "type": "IPO",
-    "label": "MOT IPO — MetaOptics Ltd",
-    "ticker": "MOT"
+    "label": "FBDT IPO — First Breach Inc.",
+    "ticker": "FBDT"
   },
   {
     "date": "2026-08-26",
@@ -464,6 +458,12 @@
     "type": "EARNINGS",
     "label": "HD Earnings",
     "ticker": "HD"
+  },
+  {
+    "date": "2026-11-19",
+    "type": "EARNINGS",
+    "label": "WMT Earnings",
+    "ticker": "WMT"
   },
   {
     "date": "2026-12-04",
