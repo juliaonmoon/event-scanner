@@ -160,16 +160,16 @@
     "label": "PPI Release"
   },
   {
-    "date": "2026-08-24",
-    "type": "IPO",
-    "label": "MOT IPO — MetaOptics Ltd",
-    "ticker": "MOT"
-  },
-  {
     "date": "2026-08-25",
     "type": "IPO",
     "label": "ADBT IPO — Advasa Holdings, Inc.",
     "ticker": "ADBT"
+  },
+  {
+    "date": "2026-08-25",
+    "type": "IPO",
+    "label": "MOT IPO — MetaOptics Ltd",
+    "ticker": "MOT"
   },
   {
     "date": "2026-08-26",
@@ -184,7 +184,7 @@
     "ticker": "NVDA"
   },
   {
-    "date": "2026-08-27",
+    "date": "2026-08-26",
     "type": "IPO",
     "label": "SCAT IPO — Southern Cross Acquisition II Corp.",
     "ticker": "SCAT"
