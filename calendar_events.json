@@ -160,18 +160,6 @@
     "label": "PPI Release"
   },
   {
-    "date": "2026-08-25",
-    "type": "IPO",
-    "label": "ADBT IPO — Advasa Holdings, Inc.",
-    "ticker": "ADBT"
-  },
-  {
-    "date": "2026-08-25",
-    "type": "IPO",
-    "label": "MOT IPO — MetaOptics Ltd",
-    "ticker": "MOT"
-  },
-  {
     "date": "2026-08-26",
     "type": "EARNINGS",
     "label": "CRM Earnings",
@@ -182,6 +170,12 @@
     "type": "EARNINGS",
     "label": "NVDA Earnings",
     "ticker": "NVDA"
+  },
+  {
+    "date": "2026-08-26",
+    "type": "IPO",
+    "label": "JTTT IPO — JATT III Acquisition Corp",
+    "ticker": "JTTT"
   },
   {
     "date": "2026-08-26",

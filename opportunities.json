@@ -595,15 +595,15 @@
     "strategy": "DAY TRADE",
     "instruments": "Shares or 1-week calls at open, sell same day",
     "entry_stock_price": 208.48,
-    "current_stock_price": 208.48,
+    "current_stock_price": 213.05,
     "exp_move_pct": 6.1,
     "avg_move_pct": null,
     "win_rate": 50,
     "avg_direction": null,
     "momentum_5d": -5.1,
     "notes": "no clear bias",
-    "status": "ACTIVE",
+    "status": "EXITED",
     "pnl_pct": null,
-    "pnl_note": null
+    "pnl_note": "day trade - P&L depends on intraday execution"
   }
 ]
