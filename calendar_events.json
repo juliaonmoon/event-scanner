@@ -160,28 +160,10 @@
     "label": "PPI Release"
   },
   {
-    "date": "2026-08-26",
-    "type": "EARNINGS",
-    "label": "CRM Earnings",
-    "ticker": "CRM"
-  },
-  {
-    "date": "2026-08-26",
-    "type": "EARNINGS",
-    "label": "NVDA Earnings",
-    "ticker": "NVDA"
-  },
-  {
-    "date": "2026-08-26",
+    "date": "2026-08-27",
     "type": "IPO",
-    "label": "JTTT IPO — JATT III Acquisition Corp",
-    "ticker": "JTTT"
-  },
-  {
-    "date": "2026-08-26",
-    "type": "IPO",
-    "label": "SCAT IPO — Southern Cross Acquisition II Corp.",
-    "ticker": "SCAT"
+    "label": "RNAQ IPO — Rainier Acquisition Corporation",
+    "ticker": "RNAQ"
   },
   {
     "date": "2026-09-02",
@@ -464,6 +446,12 @@
     "type": "EARNINGS",
     "label": "HD Earnings",
     "ticker": "HD"
+  },
+  {
+    "date": "2026-11-18",
+    "type": "EARNINGS",
+    "label": "NVDA Earnings",
+    "ticker": "NVDA"
   },
   {
     "date": "2026-11-19",
