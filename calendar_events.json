@@ -160,10 +160,10 @@
     "label": "PPI Release"
   },
   {
-    "date": "2026-08-27",
+    "date": "2026-08-28",
     "type": "IPO",
-    "label": "RNAQ IPO — Rainier Acquisition Corporation",
-    "ticker": "RNAQ"
+    "label": "IPHX IPO — Inflection Point Acquisition Corp. VIII",
+    "ticker": "IPHX"
   },
   {
     "date": "2026-09-02",
@@ -448,7 +448,7 @@
     "ticker": "HD"
   },
   {
-    "date": "2026-11-18",
+    "date": "2026-11-17",
     "type": "EARNINGS",
     "label": "NVDA Earnings",
     "ticker": "NVDA"
