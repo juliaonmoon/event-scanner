@@ -602,7 +602,7 @@
     "avg_direction": null,
     "momentum_5d": -5.1,
     "notes": "no clear bias",
-    "status": "EXITED",
+    "status": "ARCHIVED",
     "pnl_pct": null,
     "pnl_note": "day trade - P&L depends on intraday execution"
   }
