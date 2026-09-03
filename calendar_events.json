@@ -160,12 +160,6 @@
     "label": "PPI Release"
   },
   {
-    "date": "2026-09-02",
-    "type": "EARNINGS",
-    "label": "AVGO Earnings",
-    "ticker": "AVGO"
-  },
-  {
     "date": "2026-09-04",
     "type": "JOBS",
     "label": "Jobs Report (NFP)"
@@ -458,6 +452,12 @@
     "type": "EARNINGS",
     "label": "WMT Earnings",
     "ticker": "WMT"
+  },
+  {
+    "date": "2026-12-02",
+    "type": "EARNINGS",
+    "label": "CRM Earnings",
+    "ticker": "CRM"
   },
   {
     "date": "2026-12-04",
