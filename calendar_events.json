@@ -192,6 +192,12 @@
     "ticker": "HNUC"
   },
   {
+    "date": "2026-09-18",
+    "type": "IPO",
+    "label": "OIG IPO — Orion180 Insurance Group Inc.",
+    "ticker": "OIG"
+  },
+  {
     "date": "2026-09-24",
     "type": "EARNINGS",
     "label": "COST Earnings",
@@ -468,6 +474,12 @@
     "date": "2026-12-09",
     "type": "FOMC",
     "label": "FOMC Rate Decision"
+  },
+  {
+    "date": "2026-12-09",
+    "type": "EARNINGS",
+    "label": "AVGO Earnings",
+    "ticker": "AVGO"
   },
   {
     "date": "2026-12-10",
