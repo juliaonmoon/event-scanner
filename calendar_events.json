@@ -180,12 +180,6 @@
     "label": "FOMC Rate Decision"
   },
   {
-    "date": "2026-09-24",
-    "type": "EARNINGS",
-    "label": "COST Earnings",
-    "ticker": "COST"
-  },
-  {
     "date": "2026-10-02",
     "type": "JOBS",
     "label": "Jobs Report (NFP)"
@@ -467,6 +461,12 @@
     "date": "2026-12-10",
     "type": "CPI",
     "label": "CPI Release"
+  },
+  {
+    "date": "2026-12-10",
+    "type": "EARNINGS",
+    "label": "COST Earnings",
+    "ticker": "COST"
   },
   {
     "date": "2026-12-10",
